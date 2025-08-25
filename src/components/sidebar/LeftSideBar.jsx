@@ -42,15 +42,18 @@ export default function LeftSidebar() {
 
         {/* Social Links */}
         <div className="flex space-x-4 mt-6">
-          {lib?.socialMediaItem?.map((item) => (
-            <a
-              key={item.id}
-              href="#"
-              className="p-2 bg-gray-800 rounded-full hover:bg-gray-700"
-            >
-              <item.icon />
-            </a>
-          ))}
+          {lib?.socialMediaItem?.map((item) => {
+            const Item = item.icon;
+            return (
+              <a
+                key={item.id}
+                href="#"
+                className="p-2 bg-gray-800 rounded-full hover:bg-gray-700"
+              >
+                <Item />
+              </a>
+            );
+          })}
         </div>
       </div>
 
