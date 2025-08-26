@@ -26,17 +26,17 @@ _.socialMediaItem = [
     path: "/",
   },
   {
-    id: 1,
+    id: 2,
     icon: FaLinkedinIn,
     path: "/",
   },
   {
-    id: 1,
+    id: 3,
     icon: FaFacebook,
     path: "/",
   },
   {
-    id: 1,
+    id: 4,
     icon: TfiGithub,
     path: "/",
   },

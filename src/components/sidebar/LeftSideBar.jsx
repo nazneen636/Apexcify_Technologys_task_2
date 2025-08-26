@@ -11,7 +11,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import lib from "../../lib/lib";
 export default function LeftSidebar() {
   return (
-    <div className="h-screen w-80 bg-black text-white flex flex-col items-center justify-between py-6 rounded-2xl shadow-lg">
+    <div className="h-screen w-80 bg-black text-white flex flex-col items-center justify-between py-6 rounded-2xl shadow-md shadow-gray-100">
       {/* Header - Available for projects */}
       <div className="w-full flex flex-col items-center">
         <div className="bg-gray-900 rounded-full px-4 py-1 text-sm text-gray-300 mb-10">
