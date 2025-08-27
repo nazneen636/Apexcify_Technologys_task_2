@@ -2,7 +2,11 @@
 
 body {
   font-family: "Rubik", sans-serif;
-  background-color: #065183;
+  background: radial-gradient(
+    circle,
+    rgba(7, 47, 54, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 :root {
