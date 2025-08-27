@@ -1,6 +1,7 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import GradientText from "../uiComponent/GradientText";
+import { motion } from "motion/react";
 const Intor = () => {
   const [text] = useTypewriter({
     words: [
@@ -13,15 +14,30 @@ const Intor = () => {
     deleteSpeed: 20,
     delaySpeed: 3000,
   });
+
+  // for motion
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 70, damping: 20 },
+    },
+  };
   return (
     <div>
       <div className="text-white flex items-center flex-col justify-center">
-        {/* <h4 className="text-2xl text-center">
-          <span className="opacity-70 "> Hi!</span>{" "}
-          <span className="hello">👋</span>{" "}
-          <span className="opacity-50">My name is Nazneen Nahar Rima</span>
-        </h4> */}
-
         <GradientText
           colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
           animationSpeed={3}
@@ -30,19 +46,29 @@ const Intor = () => {
         >
           <span className=""> Hi!</span> <span className="hello">👋</span>{" "}
           <span className="">My name is Nazneen Nahar Rima</span>
-        </GradientText>
-
-        <h1 className="text-7xl text-center mt-10 leading-[120%]">
-          A Professional
-        </h1>
-        <h2 className="text-7xl text-center mt-2 ">
-          <span className="text-yellow"> MERN Stack </span>Developer,{" "}
-        </h2>
-        <h2 className="mt-1 text-center text-4xl">
-          <span className="">Specializing in</span>{" "}
-          <span className="text-4xl  text-yellow-200">{text}</span>
-          <Cursor cursorColor="white" />
-        </h2>
+        </GradientText>{" "}
+        <motion.div
+          initial={{ opacity: 0 }} // 👈 start lower with 0 opacity
+          animate={{ opacity: 1 }} // 👈 move up to normal position + visible
+          exit={{ opacity: 0 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{
+            duration: 1.5, // 👈 fade duration (in seconds)
+            ease: "easeInOut",
+          }}
+        >
+          <h1 className="text-7xl text-center mt-10 leading-[120%]">
+            A Professional
+          </h1>
+          <h2 className="text-7xl text-center mt-2 ">
+            <span className="text-yellow"> MERN Stack </span>Developer,{" "}
+          </h2>
+          <h2 className="mt-1 text-center text-4xl">
+            <span className="">Specializing in</span>{" "}
+            <span className="text-4xl  text-yellow-200">{text}</span>
+            <Cursor cursorColor="white" />
+          </h2>
+        </motion.div>
       </div>
     </div>
   );

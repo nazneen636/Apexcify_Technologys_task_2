@@ -1,12 +1,16 @@
 import React from "react";
-import Intor from "../components/homeComponent/Intor";
+import Intro from "../components/homeComponent/Intor";
 import StatsSection from "../components/homeComponent/BannerStats";
+import About from "../components/homeComponent/About";
+import Drawer from "../components/common/Drawer";
 
 const Home = () => {
   return (
     <div>
-      <Intor />
+      <Intro />
       <StatsSection />
+      <Drawer />
+      <About />
     </div>
   );
 };

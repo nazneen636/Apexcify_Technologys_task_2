@@ -39,7 +39,8 @@ const ParticlesBG = () => {
                 value: "transparent",
               },
             },
-            fpsLimit: 120,
+            // fullScreen: { enable: false },
+            fpsLimit: 820,
             interactivity: {
               events: {
                 onClick: {
@@ -68,10 +69,10 @@ const ParticlesBG = () => {
               },
               links: {
                 color: "#ffffff",
-                distance: 150,
+                distance: 300,
                 enable: true,
-                opacity: 0.5,
-                width: 1,
+                opacity: 0.3,
+                width: 0.3,
               },
               move: {
                 direction: "none",
@@ -80,24 +81,24 @@ const ParticlesBG = () => {
                   default: "bounce",
                 },
                 random: false,
-                speed: 6,
+                speed: 0.5,
                 straight: false,
               },
               number: {
                 density: {
                   enable: true,
-                  area: 800,
+                  area: 500,
                 },
-                value: 80,
+                value: 100,
               },
               opacity: {
-                value: 0.5,
+                value: 0.2,
               },
               shape: {
                 type: "circle",
               },
               size: {
-                value: { min: 1, max: 5 },
+                value: { min: 1, max: 3 },
               },
             },
             detectRetina: true,

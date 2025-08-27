@@ -1,14 +1,16 @@
 import React from "react";
 import LeftSidebar from "./sidebar/LeftSideBar";
 import RightSidebar from "./sidebar/RightSideBar";
-import Background from "./common/Background";
 import { Outlet } from "react-router";
 import ParticlesBG from "./particlebg/ParticlesBG";
+import { IoSettingsSharp } from "react-icons/io5";
+import { FiSettings } from "react-icons/fi";
+// import VantaBackground from "./vanta/vantaBg";
 
 const Root = () => {
   return (
     <div className="flex justify-between items-center">
-      <ParticlesBG />
+      {/* <ParticlesBG /> */}
       <div className="w-[30%]">
         <div className="fixed top-0 left-10 ">
           <LeftSidebar />
