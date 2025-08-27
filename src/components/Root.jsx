@@ -3,10 +3,12 @@ import LeftSidebar from "./sidebar/LeftSideBar";
 import RightSidebar from "./sidebar/RightSideBar";
 import Background from "./common/Background";
 import { Outlet } from "react-router";
+import ParticlesBG from "./particlebg/ParticlesBG";
 
 const Root = () => {
   return (
     <div className="flex justify-between items-center">
+      <ParticlesBG />
       <div className="w-[30%]">
         <div className="fixed top-0 left-10 ">
           <LeftSidebar />

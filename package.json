@@ -12,6 +12,9 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@tailwindcss/vite": "^4.1.12",
+    "@tsparticles/engine": "^3.9.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
     "gsap": "^3.13.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -20,7 +23,6 @@
     "react-router": "^7.8.2",
     "react-simple-typewriter": "^5.0.1",
     "tailwindcss": "^4.1.12",
-    "tsparticles": "^3.9.1",
     "tsparticles-preset-confetti": "^2.12.0",
     "tsparticles-preset-snow": "^2.12.0",
     "tsparticles-preset-stars": "^2.12.0"

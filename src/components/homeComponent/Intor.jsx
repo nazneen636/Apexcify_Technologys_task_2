@@ -1,5 +1,6 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import GradientText from "../uiComponent/GradientText";
 const Intor = () => {
   const [text] = useTypewriter({
     words: [
@@ -15,11 +16,22 @@ const Intor = () => {
   return (
     <div>
       <div className="text-white flex items-center flex-col justify-center">
-        <h4 className="text-2xl text-center">
+        {/* <h4 className="text-2xl text-center">
           <span className="opacity-70 "> Hi!</span>{" "}
           <span className="hello">👋</span>{" "}
           <span className="opacity-50">My name is Nazneen Nahar Rima</span>
-        </h4>
+        </h4> */}
+
+        <GradientText
+          colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+          animationSpeed={3}
+          showBorder={false}
+          className="text-2xl text-center custom-class"
+        >
+          <span className=""> Hi!</span> <span className="hello">👋</span>{" "}
+          <span className="">My name is Nazneen Nahar Rima</span>
+        </GradientText>
+
         <h1 className="text-7xl text-center mt-10 leading-[120%]">
           A Professional
         </h1>
