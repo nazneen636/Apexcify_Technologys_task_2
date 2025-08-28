@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { motion } from "motion/react";
 
 const statsData = [
   {
@@ -42,7 +43,7 @@ const StatsSection = () => {
         statsData.forEach((stat) => {
           if (prevStats[stat.key] < stat.target) {
             updatedStats[stat.key] = Math.min(
-              prevStats[stat.key] + Math.ceil(stat.target / 20), // Increment dynamically
+              prevStats[stat.key] + Math.ceil(stat.target / 20),
               stat.target
             );
             allCompleted = false;
@@ -57,11 +58,34 @@ const StatsSection = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Parent container variant for stagger
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.3, // each child animates after 0.3s
+      },
+    },
+  };
+
+  // Child item variant
+  const item = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
+
   return (
-    <div className="bg-yellow rounded-full  mt-28 px-16 py-10 flex items-center justify-between w-full text-gray-100 ">
+    <motion.div
+      className="bg-yellow rounded-full mt-28 px-16 py-10 flex items-center justify-between w-full text-gray-100"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.5 }}
+    >
       {statsData.map((stat) => (
-        <div
+        <motion.div
           key={stat.id}
+          variants={item} // ✅ assign child variant here
           className="flex flex-col gap-3 items-center justify-center border border-gray-200 px-6 rounded-xl py-4"
         >
           <h1 className="text-6xl font-normal">
@@ -69,9 +93,9 @@ const StatsSection = () => {
             {stat.suffix}
           </h1>
           <p className="text-xl opacity-80">{stat.label}</p>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

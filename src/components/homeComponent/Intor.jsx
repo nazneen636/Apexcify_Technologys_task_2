@@ -48,12 +48,10 @@ const Intor = () => {
           <span className="">My name is Nazneen Nahar Rima</span>
         </GradientText>{" "}
         <motion.div
-          initial={{ opacity: 0 }} // 👈 start lower with 0 opacity
-          animate={{ opacity: 1 }} // 👈 move up to normal position + visible
-          exit={{ opacity: 0 }}
-          viewport={{ once: false, amount: 0.5 }}
+          initial={{ opacity: 0 }} // start 50px left
+          whileInView={{ opacity: 1 }} // move to normal position
           transition={{
-            duration: 1.5, // 👈 fade duration (in seconds)
+            duration: 1.5,
             ease: "easeInOut",
           }}
         >
