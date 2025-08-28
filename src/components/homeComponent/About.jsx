@@ -25,12 +25,12 @@ const About = () => {
         <div className="grid grid-cols-7 gap-8 text-justify">
           <SectionTitle titleText="About Me" />
           <div className="col-span-6">
-            <SectionHeading>
+            <h2 className="text-4xl leading-[130%]">
               A passionate{" "}
               <span className="text-yellow-200">MERN Stack Developer</span>{" "}
               turning ideas into visually stunning, user-friendly,{" "}
               <span className="text-yellow-200">responsive</span> websites.
-            </SectionHeading>
+            </h2>
           </div>
         </div>
         <p className="mt-4 text-lg leading-[170%] opacity-60 text-justify">
