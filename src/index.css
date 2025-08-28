@@ -122,8 +122,9 @@ body {
   bottom: 0;
   background: radial-gradient(
     circle at var(--mouse-x) var(--mouse-y),
-    var(--spotlight-color),
-    transparent 80%
+    rgba(255, 0, 150, 0.3),
+    /* pink */ rgba(0, 200, 255, 0.3),
+    /* cyan */ transparent 90%
   );
   opacity: 0;
   transition: opacity 0.5s ease;

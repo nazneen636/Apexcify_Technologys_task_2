@@ -1,3 +1,4 @@
+import { scale } from "motion";
 import {
   FaBriefcase,
   FaEnvelope,
@@ -51,4 +52,22 @@ _.menuItem = [
   { id: 5, icon: MdQuestionAnswer, path: "#faq", label: "FAQ" },
   { id: 6, icon: MdEmail, path: "#contact", label: "Contact" },
 ];
+
+// for framer motion
+// Parent container variant for stagger
+_.container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3, // each child animates after 0.3s
+    },
+  },
+};
+
+// Child item variant
+_.item = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
+
 export default _;

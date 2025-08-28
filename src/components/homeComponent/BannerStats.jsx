@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import lib from "../../lib/lib";
 
 const statsData = [
   {
@@ -58,26 +59,26 @@ const StatsSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Parent container variant for stagger
-  const container = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.3, // each child animates after 0.3s
-      },
-    },
-  };
+  // // Parent container variant for stagger
+  // const container = {
+  //   hidden: {},
+  //   visible: {
+  //     transition: {
+  //       staggerChildren: 0.3, // each child animates after 0.3s
+  //     },
+  //   },
+  // };
 
-  // Child item variant
-  const item = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-  };
-
+  // // Child item variant
+  // const item = {
+  //   hidden: { opacity: 0, y: 50 },
+  //   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  // };
+  const item = lib.item;
   return (
     <motion.div
       className="bg-yellow rounded-full mt-28 px-16 py-10 flex items-center justify-between w-full text-gray-100"
-      variants={container}
+      variants={lib.container}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.5 }}

@@ -2,6 +2,7 @@ import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import GradientText from "../uiComponent/GradientText";
 import { motion } from "motion/react";
+import lib from "../../lib/lib";
 const Intor = () => {
   const [text] = useTypewriter({
     words: [
@@ -14,27 +15,6 @@ const Intor = () => {
     deleteSpeed: 20,
     delaySpeed: 3000,
   });
-
-  // for motion
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 30 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { type: "spring", stiffness: 70, damping: 20 },
-    },
-  };
   return (
     <div>
       <div className="text-white flex items-center flex-col justify-center">
@@ -48,11 +28,12 @@ const Intor = () => {
           <span className="">My name is Nazneen Nahar Rima</span>
         </GradientText>{" "}
         <motion.div
+          // variants={lib.container}
           initial={{ opacity: 0 }} // start 50px left
           whileInView={{ opacity: 1 }} // move to normal position
           transition={{
-            duration: 1.5,
-            ease: "easeInOut",
+            duration: 2,
+            ease: "easeIn",
           }}
         >
           <h1 className="text-7xl text-center mt-10 leading-[120%]">

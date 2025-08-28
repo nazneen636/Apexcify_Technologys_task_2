@@ -2,9 +2,9 @@ import React from "react";
 
 const SectionTitle = ({ titleText, className }) => {
   return (
-    <div>
+    <div className="mt-1">
       <h4
-        className={`${className} text-2xl opacity-70 flex gap-3 items-center `}
+        className={`${className} text-base opacity-70 flex gap-3 items-center `}
       >
         {" "}
         <div className="w-2 h-2 bg-white rounded-full inline-block"></div>
