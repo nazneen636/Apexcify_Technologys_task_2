@@ -12,7 +12,7 @@ const Root = () => {
     <div className="flex justify-between items-center">
       {/* <ParticlesBG /> */}
       <div className="w-[30%]">
-        <div className="fixed top-0 left-10 ">
+        <div className="fixed top-0 left-10 my-2">
           <LeftSidebar />
         </div>
       </div>

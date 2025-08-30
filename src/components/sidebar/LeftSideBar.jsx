@@ -22,7 +22,7 @@ export default function LeftSidebar() {
 
         {/* Profile Image */}
         <div
-          className="w-64 h-64 rounded-xl overflow-hidden"
+          className="w-60 h-60 rounded-xl overflow-hidden"
           style={{ background: "var(--profile-gradient)" }}
         >
           <img

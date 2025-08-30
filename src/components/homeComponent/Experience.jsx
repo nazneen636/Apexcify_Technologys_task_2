@@ -31,7 +31,7 @@ const trainingItem = [
 const Experience = () => {
   const item = lib.item;
   return (
-    <div>
+    <div className="">
       {" "}
       <div className="mt-20">
         <SectionTitle titleText="Experience" />
@@ -63,7 +63,7 @@ const Experience = () => {
                   <RiArrowRightUpLine className="text-white text-2xl group-hover:text-black duration-300 transition-all" />
                 </div>
                 <div className="">
-                  <p className="opacity-80">{job?.year}</p>
+                  <p className="opacity-70">{job?.year}</p>
                   <h4 className="text-lg font-medium mt-1 opacity-90">
                     {job?.position}
                   </h4>
@@ -92,7 +92,7 @@ const Experience = () => {
                   <RiArrowRightUpLine className="text-white text-2xl group-hover:text-black duration-300 transition-all" />
                 </div>
                 <div className="">
-                  <p className="opacity-80">{training?.year}</p>
+                  <p className="opacity-70">{training?.year}</p>
                   <h4 className="text-lg font-medium mt-1 opacity-90">
                     {training?.position}
                   </h4>
