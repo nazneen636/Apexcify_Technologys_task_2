@@ -77,7 +77,7 @@ const StatsSection = () => {
   const item = lib.item;
   return (
     <motion.div
-      className="bg-yellow rounded-full mt-28 px-16 py-10 flex items-center justify-between w-full text-gray-100"
+      className="bg-yellow rounded-full mt-16 px-16 py-10 flex items-center justify-between w-full text-gray-100"
       variants={lib.container}
       initial="hidden"
       whileInView="visible"
@@ -87,13 +87,13 @@ const StatsSection = () => {
         <motion.div
           key={stat.id}
           variants={item} // ✅ assign child variant here
-          className="flex flex-col gap-3 items-center justify-center border border-gray-200 px-6 rounded-xl py-4"
+          className="flex flex-col gap-3 items-center justify-center border border-gray-200 px-6 rounded-xl py-6"
         >
-          <h1 className="text-6xl font-normal">
+          <h1 className="text-5xl font-normal">
             {stats[stat.key]}
             {stat.suffix}
           </h1>
-          <p className="text-xl opacity-80">{stat.label}</p>
+          <p className="text-lg opacity-80">{stat.label}</p>
         </motion.div>
       ))}
     </motion.div>
