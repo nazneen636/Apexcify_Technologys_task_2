@@ -102,7 +102,7 @@ const About = () => {
       variants={lib.container}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.5 }}
       className="mt-24"
     >
       <motion.div
@@ -142,18 +142,25 @@ const About = () => {
         className="mt-20 flex justify-between opacity-90  -translate-y-10"
       >
         {serviceGroups?.map((group, groupIndex) => (
-          <div key={groupIndex} className="flex flex-col gap-4">
-            {group.map((item) => (
+          <motion.div
+            variants={lib.container}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            key={groupIndex}
+            className="flex flex-col gap-4"
+          >
+            {group.map((service) => (
               <motion.div
                 variants={item}
-                key={item.id}
+                key={service.id}
                 className="flex gap-4 items-center service-item"
               >
                 <FaArrowRightLong className="text-yellow-200 text-xl" />
-                <p className="text-base">{item.text}</p>
+                <p className="text-base">{service.text}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         ))}
       </motion.div>
     </motion.div>
