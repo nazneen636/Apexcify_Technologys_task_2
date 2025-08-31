@@ -18,6 +18,16 @@ import git from "../assets/techStack/Git (1).png";
 
 // project
 import fresh from "../assets/project/fresh.png";
+import vip_Yacht from "../assets/project/vip-yacht.png";
+import bmi from "../assets/project/bmi.png";
+import cilicon from "../assets/project/cilicon.png";
+import counter from "../assets/project/counter.png";
+import gussing_game from "../assets/project/gussing game.png";
+import product_listing from "../assets/project/product-listing.png";
+import quiz from "../assets/project/quiz app.png";
+import weather from "../assets/project/weather app.png";
+import hancok from "../assets/project/hancok.png";
+import dashboard from "../assets/project/dashboard.png";
 
 export const assets = {
   html: html,
@@ -37,4 +47,14 @@ export const assets = {
   vite: vite,
   git: git,
   fresh: fresh,
+  vip_Yacht: vip_Yacht,
+  bmi: bmi,
+  cilicon: cilicon,
+  counter: counter,
+  gussing_game: gussing_game,
+  product_listing: product_listing,
+  quiz: quiz,
+  weather: weather,
+  hancok: hancok,
+  dashboard: dashboard,
 };

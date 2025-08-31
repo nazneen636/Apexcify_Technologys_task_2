@@ -109,11 +109,11 @@ const TechStack = () => {
           <SwiperSlide key={item.id}>
             <div className="rounded-md card px-6 py-8 bg-gray-800 flex flex-col items-center justify-center">
               <h2 className="mb-3 text-xl">{item.name}</h2>
-              <div className="w-24 h-24 bg-gray-100 p-8 rounded-md flex items-center justify-center mb-3">
+              <div className="w-24 h-24 bg-gray-100 p-3 rounded-md mb-3">
                 <img
                   src={item.image}
                   alt=""
-                  className="object-contain w-full h-full"
+                  className="object-contain w-full h-full block box-content!"
                 />
               </div>
             </div>

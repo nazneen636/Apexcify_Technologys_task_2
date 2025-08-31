@@ -13,14 +13,14 @@ const ProjectCard = ({
   liveLink,
 }) => {
   return (
-    <div className="w-full">
+    <div className="w-full h-[600px]">
       <div
         className={` border border-[#ffffff73] rounded-2xl overflow-hidden ${className}`}
       >
         <div className="relative p-4 rounded-lg overflow-hidden">
-          <img src={src} alt={alt} className="h-[350px] w-full object-cover" />
+          <img src={src} alt={alt} className="h-[350px] w-full object-cover " />
           <Link
-            href={liveLink}
+            to={liveLink}
             className="absolute w-full h-full bg-[#000000af] left-0 top-0 flex items-center justify-center opacity-0 hover:opacity-100 duration-300 transition-all"
           >
             <div className="w-20 h-20 rounded-full bg-yellow-200 flex items-center justify-center">
