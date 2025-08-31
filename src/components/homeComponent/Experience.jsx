@@ -62,7 +62,7 @@ const Experience = () => {
                 <div className="bg-black rounded-full group-hover:bg-white w-8 h-8 flex items-center justify-center duration-300 transition-all aspect-square">
                   <RiArrowRightUpLine className="text-white text-2xl group-hover:text-black duration-300 transition-all" />
                 </div>
-                <div className="">
+                <div className="group-hover:text-yellow-200">
                   <p className="opacity-70">{job?.year}</p>
                   <h4 className="text-lg font-medium mt-1 opacity-90">
                     {job?.position}
@@ -91,7 +91,7 @@ const Experience = () => {
                 <div className="bg-black rounded-full group-hover:bg-white w-8 h-8 flex items-center justify-center duration-300 transition-all aspect-square">
                   <RiArrowRightUpLine className="text-white text-2xl group-hover:text-black duration-300 transition-all" />
                 </div>
-                <div className="">
+                <div className="group-hover:text-yellow-200">
                   <p className="opacity-70">{training?.year}</p>
                   <h4 className="text-lg font-medium mt-1 opacity-90">
                     {training?.position}
