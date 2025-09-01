@@ -54,12 +54,18 @@ _.menuItem = [
 ];
 
 // for framer motion
+// y axis animation
 // Parent container variant for stagger
 _.container = {
-  hidden: {},
+  hidden: { opacity: 0, y: 50 },
   visible: {
+    opacity: 1,
+    y: 0,
     transition: {
-      staggerChildren: 0.3, // each child animates after 0.3s
+      type: "spring",
+      stiffness: 60,
+      damping: 20,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -70,6 +76,27 @@ _.item = {
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
+// x axis animation
+_.x_container = {
+  hidden: { opacity: 0, x: 80 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      // stiffness: 60,
+      damping: 20,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+_.x_item = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+};
+
+// word animation
 _.wordAnimContainer = {
   hidden: { opacity: 0 },
   visible: {
@@ -79,12 +106,18 @@ _.wordAnimContainer = {
     },
   },
 };
-_.wordAnimation = {
-  hidden: { opacity: 0, x: -30 },
-  visible: (i) => ({
+
+_.sentence = {
+  hidden: { opacity: 1 },
+  visible: {
     opacity: 1,
-    x: 0,
-    transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" },
-  }),
+    transition: {
+      staggerChildren: 0.3, // delay each word
+    },
+  },
+};
+_.word = {
+  hidden: { x: 100, opacity: 0 },
+  visible: { x: 0, opacity: 1 },
 };
 export default _;

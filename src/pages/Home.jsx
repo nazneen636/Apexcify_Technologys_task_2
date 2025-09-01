@@ -6,6 +6,8 @@ import Drawer from "../components/common/Drawer";
 import Experience from "../components/homeComponent/Experience";
 import TechStack from "../components/homeComponent/TechStack";
 import Project from "../components/homeComponent/project/Project";
+import Services from "../components/homeComponent/Service";
+import ContactPage from "../components/homeComponent/Contact";
 
 const Home = () => {
   return (
@@ -14,9 +16,11 @@ const Home = () => {
       <StatsSection />
       <Drawer />
       <About />
+      <Services />
       <Experience />
       <TechStack />
       <Project />
+      <ContactPage />
     </div>
   );
 };

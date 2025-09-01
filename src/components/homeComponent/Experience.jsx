@@ -56,6 +56,7 @@ const Experience = () => {
           >
             {jobItem?.map((job) => (
               <motion.div
+                key={job.id}
                 variants={item}
                 className="flex gap-5 items-center group"
               >
@@ -85,6 +86,7 @@ const Experience = () => {
           >
             {trainingItem?.map((training) => (
               <motion.div
+                key={training.id}
                 variants={item}
                 className="flex gap-5 items-center group"
               >
