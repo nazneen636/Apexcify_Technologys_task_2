@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import lib from "../../lib/lib";
+import { toast } from "react-toastify";
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -15,24 +16,31 @@ export default function ContactPage() {
       ...prev,
       [name]: value,
     }));
+    setError((prev) => ({ ...prev, [name]: "" }));
   };
 
   const validate = () => {
     let newErrors = {};
     if (!formData.fullName.trim()) {
-      formData.fullName = "Name is required";
+      newErrors.fullName = "Name is required";
     }
     if (!formData.email.trim()) {
-      formData.email = "email is required";
+      newErrors.email = "email is required";
     }
     return newErrors;
   };
+  //   handle submit
   const handleSubmit = (e) => {
     e.preventDefault();
     const validateErrors = validate();
     if (Object.keys(validateErrors).length > 0) {
       setError(validateErrors);
     } else {
+      toast.success("Form submitted successfully!", {
+        position: "top-right",
+        autoClose: 3000,
+      });
+      setFormData({ fullName: "", email: "", phone: "", message: "" });
       console.log("Form submitted:", formData);
     }
   };
@@ -71,6 +79,11 @@ export default function ContactPage() {
               placeholder="Enter your full name"
               className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-500 py-3 pr-10 focus:outline-none focus:border-white transition-colors"
             />
+            {error?.fullName && (
+              <p className="text-red-300 absolute top-full left-0 mt-1 text-xs z-20 capitalize">
+                {error.fullName}
+              </p>
+            )}
           </div>
         </motion.div>
 
@@ -88,6 +101,11 @@ export default function ContactPage() {
               placeholder="Enter the Email"
               className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-500 py-3 pr-10 focus:outline-none focus:border-white transition-colors"
             />
+            {error?.email && (
+              <p className="text-red-300 absolute top-full left-0 mt-1 text-xs z-20 capitalize">
+                {error.email}
+              </p>
+            )}
           </div>
         </motion.div>
 
