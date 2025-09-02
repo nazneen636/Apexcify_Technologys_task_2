@@ -12,11 +12,18 @@ import ContactPage from "../components/homeComponent/Contact";
 const Home = () => {
   return (
     <div>
-      <Intro />
-      <StatsSection />
+      <div id="home">
+        <Intro />
+        <StatsSection />
+      </div>
       <Drawer />
-      <About />
-      <Services />
+      <div id="about">
+        <About />
+      </div>
+      <div id="services">
+        {" "}
+        <Services />
+      </div>
       <Experience />
       <TechStack />
       <Project />

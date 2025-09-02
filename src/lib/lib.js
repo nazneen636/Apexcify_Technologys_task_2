@@ -1,11 +1,15 @@
 import { scale } from "motion";
 import {
   FaBriefcase,
+  FaCode,
   FaEnvelope,
   FaFacebook,
   FaHome,
   FaLinkedinIn,
+  FaProjectDiagram,
   FaServicestack,
+  FaTools,
+  FaUser,
   FaUserAlt,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -46,13 +50,13 @@ _.socialMediaItem = [
 // menu item
 _.menuItem = [
   { id: 1, icon: FaHome, path: "#home", label: "Home" },
-  { id: 2, icon: GrServices, path: "#services", label: "Services" },
-  { id: 3, icon: MdWork, path: "#works", label: "Works" },
-  { id: 4, icon: MdRateReview, path: "#testimonial", label: "Testimonial" },
-  { id: 5, icon: MdQuestionAnswer, path: "#faq", label: "FAQ" },
-  { id: 6, icon: MdEmail, path: "#contact", label: "Contact" },
+  { id: 2, icon: FaUser, path: "#about", label: "About" },
+  { id: 3, icon: FaTools, path: "#services", label: "Services" },
+  { id: 4, icon: FaBriefcase, path: "#experience", label: "Experience" },
+  { id: 5, icon: FaCode, path: "#techstack", label: "Tech Stack" },
+  { id: 6, icon: FaProjectDiagram, path: "#project", label: "Projects" },
+  { id: 7, icon: FaEnvelope, path: "#contact", label: "Contact" },
 ];
-
 // for framer motion
 // y axis animation
 // Parent container variant for stagger

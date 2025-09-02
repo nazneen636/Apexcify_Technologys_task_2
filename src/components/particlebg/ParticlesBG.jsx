@@ -45,7 +45,7 @@ const ParticlesBG = () => {
               events: {
                 onClick: {
                   enable: true,
-                  mode: "push",
+                  mode: "",
                 },
                 onHover: {
                   enable: true,
