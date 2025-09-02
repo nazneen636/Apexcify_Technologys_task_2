@@ -106,7 +106,7 @@ const projectItem = [
 
 const Project = () => {
   return (
-    <div className="mt-20 backdropFilter rounded-xl px-8 py-10 relative card">
+    <div className=" backdropFilter rounded-xl px-8 py-10 relative card">
       <h1 className="text-5xl font-semibold text-center mb-8">
         My Wo
         <span className="bg-gradient-to-r  to-yellow-200 from-cyan-300 bg-clip-text text-transparent">

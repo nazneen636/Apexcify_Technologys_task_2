@@ -1,5 +1,6 @@
-import { Link, useLocation } from "react-router";
+import { useLocation } from "react-router";
 import lib from "../../lib/lib";
+import { Link } from "react-scroll";
 export default function RightSidebar() {
   const location = useLocation();
   return (
@@ -9,17 +10,17 @@ export default function RightSidebar() {
         {lib?.menuItem?.map((item) => {
           const Icon = item.icon;
           return (
-            <span
-              to={item.path}
+            <Link
               key={item.id}
-              className={
-                location.hash === item.path
-                  ? "p-3.5 rounded-full bg-white text-gray-800"
-                  : "p-3.5 rounded-full hover:bg-[#0000002c]  transition-all"
-              }
+              to={item.path.replace("#", "")} // remove # for react-scroll
+              smooth={true}
+              spy={true}
+              duration={500}
+              className="p-3.5 rounded-full hover:bg-[#0000002c] hover:text-white transition-all"
+              activeClass="bg-white! text-gray-800!"
             >
               <Icon size={22} />
-            </span>
+            </Link>
           );
         })}
       </div>

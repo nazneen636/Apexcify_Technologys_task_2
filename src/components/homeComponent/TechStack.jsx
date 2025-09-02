@@ -87,7 +87,7 @@ const techItem = [
 
 const TechStack = () => {
   return (
-    <div className="mt-28  relative">
+    <div className=" relative">
       <h1 className="text-5xl font-semibold text-center mb-8">
         Tech S
         <span className="bg-gradient-to-r  to-yellow-200 from-cyan-300 bg-clip-text text-transparent">

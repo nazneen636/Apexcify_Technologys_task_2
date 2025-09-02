@@ -24,10 +24,18 @@ const Home = () => {
         {" "}
         <Services />
       </div>
-      <Experience />
-      <TechStack />
-      <Project />
-      <ContactPage />
+      <div id="experience">
+        <Experience />
+      </div>
+      <div id="techstack">
+        <TechStack />
+      </div>
+      <div id="project" className="pt-20">
+        <Project />
+      </div>
+      <div id="contact" className="pt-20">
+        <ContactPage />
+      </div>
     </div>
   );
 };
