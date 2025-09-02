@@ -28,7 +28,7 @@ const ParticlesBG = () => {
   };
 
   return (
-    <div className="-z-10">
+    <div className="-z-10 h-full">
       {init && (
         <Particles
           id="tsparticles"
@@ -58,7 +58,7 @@ const ParticlesBG = () => {
                   quantity: 4,
                 },
                 repulse: {
-                  distance: 200,
+                  distance: 20,
                   duration: 0.4,
                 },
               },
@@ -70,6 +70,8 @@ const ParticlesBG = () => {
               links: {
                 color: "#ffffff",
                 distance: 300,
+                height: 1,
+                width: 1,
                 enable: true,
                 opacity: 0.3,
                 width: 0.3,

@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import lib from "../../lib/lib";
 export default function RightSidebar() {
   return (
@@ -8,13 +8,13 @@ export default function RightSidebar() {
         {lib?.menuItem?.map((item) => {
           const Icon = item.icon;
           return (
-            <Link
+            <NavLink
               to={item.path}
               key={item.id}
               className="p-3.5 rounded-full hover:bg-[#0000002c]  transition-all"
             >
               <Icon size={22} />
-            </Link>
+            </NavLink>
           );
         })}
       </div>

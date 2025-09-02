@@ -10,7 +10,7 @@ import { FiSettings } from "react-icons/fi";
 const Root = () => {
   return (
     <div className="flex justify-between items-center">
-      {/* <ParticlesBG /> */}
+      <ParticlesBG />
       <div className="w-[30%]">
         <div className="fixed top-0 left-10 my-2">
           <LeftSidebar />

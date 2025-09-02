@@ -81,7 +81,7 @@ export default function Services() {
   };
 
   return (
-    <div className="bg-neutral-900 rounded-2xl px-10 py-12 w-full mt-20">
+    <div className="backdropFilter card rounded-2xl px-10 py-12 w-full mt-20">
       {/* Top Small Label */}
       <SectionTitle className="mb-8" titleText={"Services"} />
 
