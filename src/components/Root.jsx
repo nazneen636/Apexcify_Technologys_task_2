@@ -1,22 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import LeftSidebar from "./sidebar/LeftSideBar";
 import RightSidebar from "./sidebar/RightSideBar";
 import { Outlet } from "react-router";
 import ParticlesBG from "./particlebg/ParticlesBG";
 import { IoSettingsSharp } from "react-icons/io5";
 import { FiSettings } from "react-icons/fi";
+import BackgroundSwitcher from "./bganimation/BgSwitcher";
+import Drawer from "./common/Drawer";
 // import VantaBackground from "./vanta/vantaBg";
 
 const Root = () => {
+  const [bgType, setBgType] = useState("particle");
   return (
-    <div className="flex justify-between items-center">
-      <ParticlesBG />
+    <div className="flex justify-between items-center relative">
+      <BackgroundSwitcher type={bgType} />
+      {/* <ParticlesBG /> */}
       <div className="w-[30%]">
         <div className="fixed top-0 left-10 my-2">
           <LeftSidebar />
         </div>
       </div>
-      <div className="min-h-screen w-[60%] mx-auto mt-20">
+      <div className="min-h-screen w-[60%] mx-auto">
         <Outlet />
       </div>
       <div className="w-[10%]">
@@ -24,6 +28,7 @@ const Root = () => {
           <RightSidebar />
         </div>
       </div>
+      <Drawer onChangeBG={setBgType} />
     </div>
   );
 };

@@ -12,28 +12,28 @@ import ContactPage from "../components/homeComponent/Contact";
 const Home = () => {
   return (
     <div>
-      <div id="home">
+      <div id="home" className="pt-20">
         <Intro />
         <StatsSection />
       </div>
       <Drawer />
-      <div id="about">
+      <div id="about" className="pt-24">
         <About />
       </div>
-      <div id="services">
+      <div id="services" className="pt-24">
         {" "}
         <Services />
       </div>
-      <div id="experience">
+      <div id="experience" className="pt-24">
         <Experience />
       </div>
-      <div id="techstack">
+      <div id="techstack" className="pt-24">
         <TechStack />
       </div>
-      <div id="project" className="pt-20">
+      <div id="project" className="pt-24">
         <Project />
       </div>
-      <div id="contact" className="pt-20">
+      <div id="contact" className="pt-24">
         <ContactPage />
       </div>
     </div>

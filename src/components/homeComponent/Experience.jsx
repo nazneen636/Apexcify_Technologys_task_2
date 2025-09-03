@@ -33,7 +33,7 @@ const Experience = () => {
   return (
     <div className="">
       {" "}
-      <div className="mt-20">
+      <div className="">
         <SectionTitle titleText="Experience" />
       </div>
       <motion.div

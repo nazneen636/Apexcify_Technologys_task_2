@@ -46,7 +46,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="backdropFilter rounded-3xl p-8 py-12 w-full mt-20 card">
+    <div className="backdropFilter rounded-3xl p-8 py-12 w-full card">
       <h1 className="text-5xl font-semibold text-center mb-8 ">
         Contact{" "}
         <span className="bg-gradient-to-r  to-yellow-200 from-cyan-300 bg-clip-text text-transparent">
@@ -80,7 +80,7 @@ export default function ContactPage() {
               className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-500 py-3 pr-10 focus:outline-none focus:border-white transition-colors"
             />
             {error?.fullName && (
-              <p className="text-red-300 absolute top-full left-0 mt-1 text-xs z-20 capitalize">
+              <p className="text-red-400 absolute top-full left-0 mt-1 text-xs z-20 capitalize">
                 {error.fullName}
               </p>
             )}
@@ -102,7 +102,7 @@ export default function ContactPage() {
               className="w-full bg-transparent border-b border-b-gray-600 text-white placeholder-gray-500 py-3 pr-10 focus:outline-none focus:border-white transition-colors"
             />
             {error?.email && (
-              <p className="text-red-300 absolute top-full left-0 mt-1 text-xs z-20 capitalize">
+              <p className="text-red-400 absolute top-full left-0 mt-1 text-xs z-20 capitalize">
                 {error.email}
               </p>
             )}
