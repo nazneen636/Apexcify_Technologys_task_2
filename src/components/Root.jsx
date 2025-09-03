@@ -12,7 +12,7 @@ import Drawer from "./common/Drawer";
 const Root = () => {
   const [bgType, setBgType] = useState("particle");
   return (
-    <div className="flex justify-between items-center relative">
+    <div className="flex h-full justify-between items-center relative">
       <BackgroundSwitcher type={bgType} />
       {/* <ParticlesBG /> */}
       <div className="w-[30%]">

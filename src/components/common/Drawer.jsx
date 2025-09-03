@@ -1,18 +1,38 @@
 import React, { useState } from "react";
 import { IoSettingsSharp } from "react-icons/io5";
 
-const Drawer = ({ onChangeBG }) => {
+const Drawer = ({ onChangeBG, onChangeColor }) => {
   const [open, setOpen] = useState(false);
 
+  // Colors
+  const colors = [
+    "#ff4500",
+    "#008000",
+    "#6a0dad",
+    "#ffcc00",
+    "#ffffff",
+    "#000000",
+    "#0a0a40",
+    "#004d40",
+    "#444444",
+  ];
+
   // Background options
-  const bgOptions = ["particle", "gradient", "snow", "stars", "lightening"];
+  const bgOptions = [
+    { id: "solid", label: "Solid Color" },
+    { id: "particles", label: "Particles" },
+    { id: "lightening", label: "Lightening" },
+    { id: "galaxy", label: "Galaxy" },
+    { id: "wavy", label: "Wavy" },
+    { id: "gradient", label: "Gradient" },
+  ];
 
   return (
     <>
       {/* Settings Button */}
       <div
         onClick={() => setOpen(true)}
-        className="fixed w-12 h-12 rounded-full flex items-center justify-center bg-black text-yellow-500 text-2xl bottom-10 right-11 z-50"
+        className="fixed w-12 h-12 rounded-full flex items-center justify-center bg-black text-yellow-500 text-2xl bottom-10 right-11 z-50 cursor-pointer"
       >
         <IoSettingsSharp />
       </div>
@@ -27,31 +47,51 @@ const Drawer = ({ onChangeBG }) => {
 
       {/* Drawer Panel */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-80 bg-[#111] text-white shadow-lg z-50 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <button
-          onClick={() => setOpen(false)}
-          className="p-2 bg-red-500 text-white w-full"
-        >
-          Close
-        </button>
+        <div className="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+          <h2 className="text-lg font-semibold">Configuration</h2>
+          <button onClick={() => setOpen(false)} className="text-gray-400">
+            ✕
+          </button>
+        </div>
 
-        <div className="p-4 flex flex-col gap-3">
-          <h2 className="font-semibold">Backgrounds</h2>
-          {bgOptions.map((bg) => (
-            <button
-              key={bg}
-              onClick={() => {
-                onChangeBG(bg); // change background
-                setOpen(false); // close drawer
-              }}
-              className="px-3 py-2 rounded bg-black text-white hover:bg-gray-700 transition"
-            >
-              {bg.charAt(0).toUpperCase() + bg.slice(1)}
-            </button>
-          ))}
+        {/* Colors */}
+        <div className="px-6 py-4">
+          <h3 className="text-sm font-medium text-gray-400 mb-2">COLORS</h3>
+          <div className="flex gap-3 flex-wrap">
+            {colors.map((c) => (
+              <div
+                key={c}
+                onClick={() => onChangeColor(c)}
+                className="w-8 h-8 rounded-full border-2 border-transparent cursor-pointer hover:scale-110 transition-transform"
+                style={{ backgroundColor: c }}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Backgrounds */}
+        <div className="px-6 py-4">
+          <h3 className="text-sm font-medium text-gray-400 mb-2">
+            THREE DIMENSIONAL SHAPES
+          </h3>
+          <div className="grid grid-cols-2 gap-3">
+            {bgOptions.map((bg) => (
+              <button
+                key={bg.id}
+                onClick={() => {
+                  onChangeBG(bg.id);
+                  setOpen(false);
+                }}
+                className="text-left text-sm text-gray-200 hover:text-yellow-400 transition"
+              >
+                {bg.label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </>

@@ -49,7 +49,7 @@ void main() {
 export default function Iridescence({
   color = [1, 1, 1],
   speed = 1.0,
-  amplitude = 0.1,
+  amplitude = 0.5,
   mouseReact = true,
   opacity = 0.01, // 👈 add opacity prop
   ...rest
