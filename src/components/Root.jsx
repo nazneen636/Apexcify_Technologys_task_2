@@ -10,14 +10,18 @@ import Drawer from "./common/Drawer";
 // import VantaBackground from "./vanta/vantaBg";
 
 const Root = () => {
+  const [profileBg, setProfileBg] = useState("var(--profile-gradient)");
   const [bgType, setBgType] = useState("particle");
+  const handleChangeColor = (color) => {
+    setProfileBg(color);
+  };
   return (
     <div className="flex h-full justify-between items-center relative">
       <BackgroundSwitcher type={bgType} />
       {/* <ParticlesBG /> */}
       <div className="w-[30%]">
-        <div className="fixed top-0 left-10 my-2">
-          <LeftSidebar />
+        <div className="fixed top-4 left-10">
+          <LeftSidebar profileBg={profileBg} />
         </div>
       </div>
       <div className="min-h-screen w-[60%] mx-auto">
@@ -28,7 +32,7 @@ const Root = () => {
           <RightSidebar />
         </div>
       </div>
-      <Drawer onChangeBG={setBgType} />
+      <Drawer onChangeColor={handleChangeColor} onChangeBG={setBgType} />
     </div>
   );
 };

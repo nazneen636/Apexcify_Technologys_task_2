@@ -6,15 +6,15 @@ const Drawer = ({ onChangeBG, onChangeColor }) => {
 
   // Colors
   const colors = [
-    "#ff4500",
-    "#008000",
-    "#6a0dad",
-    "#ffcc00",
-    "#ffffff",
-    "#000000",
-    "#0a0a40",
-    "#004d40",
-    "#444444",
+    { id: "orange", value: "#ff4500" },
+    { id: "green", value: "#008000" },
+    { id: "purple", value: "#6a0dad" },
+    { id: "yellow", value: "#ffcc00" },
+    { id: "white", value: "#ffffff" },
+    { id: "black", value: "#000000" },
+    { id: "navy", value: "#0a0a40" },
+    { id: "teal", value: "#004d40" },
+    { id: "gray", value: "#444444" },
   ];
 
   // Background options
@@ -64,10 +64,13 @@ const Drawer = ({ onChangeBG, onChangeColor }) => {
           <div className="flex gap-3 flex-wrap">
             {colors.map((c) => (
               <div
-                key={c}
-                onClick={() => onChangeColor(c)}
+                key={c.id}
+                onClick={() => {
+                  onChangeColor(c.value);
+                  setOpen(false);
+                }}
                 className="w-8 h-8 rounded-full border-2 border-transparent cursor-pointer hover:scale-110 transition-transform"
-                style={{ backgroundColor: c }}
+                style={{ backgroundColor: c.value }}
               />
             ))}
           </div>

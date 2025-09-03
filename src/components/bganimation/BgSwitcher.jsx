@@ -1,9 +1,9 @@
 import React from "react";
 import Galaxy from "./Galaxy";
-import Gradient from "./GradientShade";
+import Gradient from "./Snow";
 import Wavy from "./Wavy";
-import Particles from "../bganimation/Particles";
-import Lightening from "../bganimation/Lightening";
+import Particles from "./Particles";
+import Lightening from "./Lightening";
 
 export default function BackgroundSwitcher({ type }) {
   switch (type) {

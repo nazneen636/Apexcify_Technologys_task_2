@@ -199,6 +199,7 @@ body {
   border-radius: 5px; /* sits outside, below the swiper */
   height: 6px;
   background: rgba(255, 255, 255, 0.25);
+  background: #e91e6238;
 }
 .tech-scrollbar .swiper-scrollbar-drag {
   background: #fff !important;

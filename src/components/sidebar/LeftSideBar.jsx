@@ -10,9 +10,11 @@ import { TfiGithub } from "react-icons/tfi";
 import { GoArrowUpRight } from "react-icons/go";
 import lib from "../../lib/lib";
 import SpotlightCard from "../uiComponent/SpotLight";
-export default function LeftSidebar() {
+import { useState } from "react";
+import Drawer from "../common/Drawer";
+export default function LeftSidebar({ profileBg }) {
   return (
-    <SpotlightCard className="h-screen w-80 bg-black text-white flex flex-col items-center justify-between py-6 rounded-2xl shadow-md shadow-gray-100">
+    <SpotlightCard className="h-[95vh] w-80 bg-black text-white flex flex-col items-center justify-between py-6 rounded-2xl shadow-md shadow-gray-100">
       {/* Header - Available for projects */}
       <div className="w-full flex flex-col items-center">
         <div className="bg-gray-900 rounded-full px-4 py-1 text-sm text-gray-300 mb-10">
@@ -22,8 +24,8 @@ export default function LeftSidebar() {
 
         {/* Profile Image */}
         <div
-          className="w-60 h-60 rounded-xl overflow-hidden"
-          style={{ background: "var(--profile-gradient)" }}
+          className="w-56 h-56 rounded-xl overflow-hidden"
+          style={{ background: profileBg }}
         >
           <img
             src={profile} // replace with your image path
