@@ -6,15 +6,13 @@ const Drawer = ({ onChangeBG, onChangeColor }) => {
 
   // Colors
   const colors = [
-    { id: "orange", value: "#ff4500" },
-    { id: "green", value: "#008000" },
-    { id: "purple", value: "#6a0dad" },
-    { id: "yellow", value: "#ffcc00" },
-    { id: "white", value: "#ffffff" },
-    { id: "black", value: "#000000" },
-    { id: "navy", value: "#0a0a40" },
-    { id: "teal", value: "#004d40" },
-    { id: "gray", value: "#444444" },
+    { id: "sunset", value: "--sunset-gradient" },
+    { id: "galaxy", value: "--galaxy-gradient" },
+    { id: "purple", value: "--purple-gradient" },
+    { id: "yellow", value: "--yellow-gradient" },
+    { id: "black", value: "--black-gradient" },
+    { id: "teal", value: "--teal-gradient" },
+    { id: "gray", value: "--gray-gradient" },
   ];
 
   // Background options
@@ -47,7 +45,7 @@ const Drawer = ({ onChangeBG, onChangeColor }) => {
 
       {/* Drawer Panel */}
       <div
-        className={`fixed top-0 right-0 h-full w-80 bg-[#111] text-white shadow-lg z-50 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-96 bg-[#111] text-white shadow-lg z-50 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -66,11 +64,15 @@ const Drawer = ({ onChangeBG, onChangeColor }) => {
               <div
                 key={c.id}
                 onClick={() => {
-                  onChangeColor(c.value);
+                  onChangeColor(`var(${c.value})`);
                   setOpen(false);
                 }}
                 className="w-8 h-8 rounded-full border-2 border-transparent cursor-pointer hover:scale-110 transition-transform"
-                style={{ backgroundColor: c.value }}
+                style={{
+                  background: c.value.startsWith("--")
+                    ? `var(${c.value})`
+                    : c.value,
+                }}
               />
             ))}
           </div>

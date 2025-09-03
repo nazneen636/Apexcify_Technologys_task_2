@@ -49,6 +49,31 @@ body {
     #065183 30%,
     #000000 100%
   );
+  --sunset-gradient: radial-gradient(
+    circle at center,
+    #ee892a 30%,
+    #ee2415 100%
+  );
+  --galaxy-gradient: radial-gradient(
+    circle at center,
+    #0f2027 30%,
+    #203a43 70%,
+    #2c5364 100%
+  );
+  --purple-gradient: radial-gradient(
+    circle at center,
+    #6a0dad 30%,
+    #b55edd 100%
+  );
+  --yellow-gradient: linear-gradient(50deg, #5f88bd 30%, #ffea00 100%);
+  --black-gradient: radial-gradient(
+    circle at center,
+    #000000 20%,
+    #222222 100%
+  );
+  --teal-gradient: radial-gradient(circle at center, #004d40 30%, #26a69a 100%);
+  --gray-gradient: radial-gradient(circle at center, #444444 30%, #888888 100%);
+
   --text-gradient: linear-gradient(90deg, #065183, #000000);
 }
 
