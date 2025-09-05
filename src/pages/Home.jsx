@@ -1,4 +1,3 @@
-import React from "react";
 import Intro from "../components/homeComponent/Intor";
 import StatsSection from "../components/homeComponent/BannerStats";
 import About from "../components/homeComponent/About";

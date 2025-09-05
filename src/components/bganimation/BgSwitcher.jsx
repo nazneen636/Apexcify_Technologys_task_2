@@ -1,4 +1,3 @@
-import React from "react";
 import Galaxy from "./Galaxy";
 import Gradient from "./Snow";
 import Wavy from "./Wavy";

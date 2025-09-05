@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoSettingsSharp } from "react-icons/io5";
 
 const Drawer = ({ onChangeBG, onChangeColor }) => {

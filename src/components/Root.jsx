@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import LeftSidebar from "./sidebar/LeftSideBar";
 import RightSidebar from "./sidebar/RightSideBar";
 import { Outlet } from "react-router";
-import ParticlesBG from "./particlebg/ParticlesBG";
-import { IoSettingsSharp } from "react-icons/io5";
-import { FiSettings } from "react-icons/fi";
 import BackgroundSwitcher from "./bganimation/BgSwitcher";
 import Drawer from "./common/Drawer";
-// import VantaBackground from "./vanta/vantaBg";
 
 const Root = () => {
   const [profileBg, setProfileBg] = useState("var(--profile-gradient)");
@@ -18,7 +14,7 @@ const Root = () => {
   return (
     <div className="flex h-full justify-between items-center relative">
       <BackgroundSwitcher type={bgType} />
-      {/* <ParticlesBG /> */}
+
       <div className="w-[30%]">
         <div className="fixed top-4 left-10">
           <LeftSidebar profileBg={profileBg} />

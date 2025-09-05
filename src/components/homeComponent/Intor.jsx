@@ -1,8 +1,7 @@
-import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import GradientText from "../uiComponent/GradientText";
 import { motion } from "motion/react";
-import lib from "../../lib/lib";
+
 const Intor = () => {
   const [text] = useTypewriter({
     words: [

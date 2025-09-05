@@ -1,5 +1,5 @@
 import { assets } from "../../helpers/assetProvider";
-import React, { useRef, useState } from "react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -126,21 +126,3 @@ const TechStack = () => {
 };
 
 export default TechStack;
-
-{
-  /* <div className="mt-24">
-  <div className="grid grid-cols-4 gap-4 ">
-    {techItem?.map((item) => (
-      <div
-        key={item.id}
-        className="rounded-md shadow shadow-gray-50 px-6 py-4 bg-gray-800 flex flex-col items-center justify-center"
-      >
-        <h2 className="mb-3 text-xl">{item.name}</h2>
-        <div className="w-32 h-32 bg-gray-900 p-8 rounded flex items-center justify-center">
-          <img src={item.image} alt="" />
-        </div>
-      </div>
-    ))}
-  </div>
-</div>; */
-}

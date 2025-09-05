@@ -1,4 +1,3 @@
-import { FaGithubAlt } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router";

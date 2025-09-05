@@ -1,4 +1,3 @@
-import React from "react";
 import SectionTitle from "../common/SectionTitle";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { motion } from "motion/react";

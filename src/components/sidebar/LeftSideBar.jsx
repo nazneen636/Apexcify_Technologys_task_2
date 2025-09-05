@@ -1,17 +1,9 @@
-import {
-  FaDribbble,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
-import { FaX } from "react-icons/fa6";
 import profile from "../../assets/profile.png";
-import { TfiGithub } from "react-icons/tfi";
+// import { TfiGithub } from "react-icons/tfi";
 import { GoArrowUpRight } from "react-icons/go";
 import lib from "../../lib/lib";
 import SpotlightCard from "../uiComponent/SpotLight";
-import { useState } from "react";
-import Drawer from "../common/Drawer";
+
 export default function LeftSidebar({ profileBg }) {
   return (
     <SpotlightCard className="h-[95vh] w-80 bg-black text-white flex flex-col items-center justify-between py-6 rounded-2xl shadow-md shadow-gray-100">

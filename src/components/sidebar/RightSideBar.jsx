@@ -1,8 +1,6 @@
-import { useLocation } from "react-router";
 import lib from "../../lib/lib";
 import { Link } from "react-scroll";
 export default function RightSidebar() {
-  const location = useLocation();
   return (
     <div className="w-[60px] bg-black text-white flex flex-col items-center justify-between py-6 rounded-full! shadow-lg px-2 blurRightSideBar">
       {/* Menu */}
