@@ -5,7 +5,7 @@ const SectionTitle = ({ titleText, className }) => {
         className={`${className} text-sm opacity-70 flex gap-3 items-center `}
       >
         {" "}
-        <div className="w-2 h-2 bg-white rounded-full inline-block"></div>
+        <div className="w-2 h-2 bg-yellow-200 rounded-full inline-block"></div>
         <div className="">{titleText}</div>
       </h4>
     </div>

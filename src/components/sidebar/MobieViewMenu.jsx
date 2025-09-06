@@ -9,10 +9,7 @@ const MobieViewMenu = ({ open, onClose }) => {
     <>
       {/* Overlay */}
       {open && (
-        <div
-          className="fixed inset-0 bg-black/50 z-50"
-          onClick={<IoMdClose />}
-        />
+        <div className="fixed inset-0 bg-black/50 z-50" onClick={onClose} />
       )}
 
       {/* Drawer */}
@@ -25,7 +22,7 @@ const MobieViewMenu = ({ open, onClose }) => {
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-lg font-bold">Menu</h2>
           <button onClick={onClose}>
-            <FaCross size={24} />
+            <IoMdClose size={24} />
           </button>
         </div>
 

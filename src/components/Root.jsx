@@ -26,6 +26,26 @@ const Root = () => {
             <LeftSidebar profileBg={profileBg} />
           </div>
         </div>
+        {/* Mobile modal sidebar */}
+        {profileOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 md:hidden">
+            <div className="relative w-[90%] max-w-sm">
+              {/* Close button with gap */}
+              {/* <button
+                onClick={() => setProfileOpen(false)}
+                className="absolute top-4 right-4 bg-gray-800 text-white rounded-full p-3 z-10 hover:bg-gray-700 transition-all"
+              >
+                ✕
+              </button> */}
+              <LeftSidebar
+                profileBg={profileBg}
+                isMobileOpen={profileOpen}
+                onClose={() => setProfileOpen(false)}
+              />
+            </div>
+          </div>
+        )}
+
         <div className="min-h-screen w-full md:w-[60%] px-5 md:px-0 mx-auto">
           <Outlet />
         </div>

@@ -4,11 +4,19 @@ import { GoArrowUpRight } from "react-icons/go";
 import lib from "../../lib/lib";
 import SpotlightCard from "../uiComponent/SpotLight";
 
-export default function LeftSidebar({ profileBg }) {
+export default function LeftSidebar({ isMobile, onClose, profileBg }) {
   return (
-    <SpotlightCard className="h-[95vh] w-80 bg-black text-white flex flex-col items-center justify-between py-6 rounded-2xl shadow-md shadow-gray-100">
+    <SpotlightCard className="h-auto w-80 bg-black text-white flex flex-col items-center gap-6 py-6 rounded-2xl shadow-md shadow-gray-100">
+      {isMobile && (
+        <button
+          onClick={onClose}
+          className="absolute top-0 right-2 text-white  p-3 z-10 hover:text-yellow-200 transition-all"
+        >
+          ✕
+        </button>
+      )}
       {/* Header - Available for projects */}
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full h-fit flex flex-col items-center">
         <div className="bg-gray-900 rounded-full px-4 py-1 text-sm text-gray-300 mb-10">
           Available for{" "}
           <span className="text-yellow-400 font-semibold">1 projects</span>
@@ -16,7 +24,7 @@ export default function LeftSidebar({ profileBg }) {
 
         {/* Profile Image */}
         <div
-          className="w-56 h-56 rounded-xl overflow-hidden"
+          className="w-40 h-40 md:w-56 md:h-56 rounded-xl overflow-hidden"
           style={{ background: profileBg }}
         >
           <img
@@ -32,8 +40,12 @@ export default function LeftSidebar({ profileBg }) {
         </h1>
 
         {/* Email */}
-        <p className="text-gray-300 text-xl mt-2">rimann636@gmail.com</p>
-        <p className="text-base text-gray-500">From Dhaka, Bangladesh</p>
+        <p className="text-gray-300 text-base md:text-xl mt-2">
+          rimann636@gmail.com
+        </p>
+        <p className="text-xs md:text-base text-gray-500">
+          From Dhaka, Bangladesh
+        </p>
 
         {/* Social Links */}
         <div className="flex space-x-4 mt-6">
@@ -53,10 +65,10 @@ export default function LeftSidebar({ profileBg }) {
       </div>
 
       {/* Footer Button */}
-      <button className="flex items-center justify-between w-[85%] bg-gray-900 px-6 py-2 rounded-full hover:bg-gray-800">
+      <button className="flex items-center justify-between md:w-[85%] gap-4 md:gap-0 bg-gray-900 px-6 py-2 rounded-full hover:bg-gray-800">
         <span>Get Started</span>
-        <span className="bg-white text-black p-2.5 rounded-full">
-          <GoArrowUpRight className="text-xl" />
+        <span className="bg-white text-black p-2 md:p-2.5 rounded-full">
+          <GoArrowUpRight className="text-base md:text-xl" />
         </span>
       </button>
     </SpotlightCard>

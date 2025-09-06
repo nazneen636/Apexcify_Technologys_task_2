@@ -120,7 +120,7 @@ const Project = () => {
           gradient={false}
           speed={60}
           pauseOnHover={true}
-          className="border border-[#ffffff7e] w-20 py-7 rounded-full shadow-md mb-8 card"
+          className="border-3 border-[#f0c403e0] w-20 py-7 rounded-full shadow-md mb-8 card"
         >
           <span className=" mx-2 flex items-center gap-5 bg-gradient-to-r  to-yellow-200 from-cyan-600 bg-clip-text text-transparent font-semibold text-5xl ">
             <div className="w-3 h-3 rounded-full bg-white"></div> Fast
