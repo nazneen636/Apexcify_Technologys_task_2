@@ -10,7 +10,7 @@ import ContactPage from "../components/homeComponent/Contact";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <div id="home" className="pt-20">
         <Intro />
         <StatsSection />

@@ -16,12 +16,12 @@ const Intor = () => {
   });
   return (
     <div>
-      <div className="pt-10 md:pt-0 text-white flex items-center flex-col justify-center">
+      <div className="h-64 md:h-auto text-white flex items-center flex-col justify-center">
         <GradientText
           colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
           animationSpeed={3}
           showBorder={false}
-          className="text-2xl text-center custom-class"
+          className="text-xl md:text-2xl text-center custom-class"
         >
           <span className=""> Hi!</span> <span className="hello">👋</span>{" "}
           <span className="">My name is Nazneen Nahar Rima</span>
@@ -34,16 +34,17 @@ const Intor = () => {
             duration: 2,
             ease: "easeIn",
           }}
+          className="text-4xl md:text-4xl"
         >
-          <h1 className="text-7xl text-center mt-10 leading-[120%]">
+          <h1 className="md:text-7xl text-center mt-10 leading-[120%]">
             A Professional
           </h1>
-          <h2 className="text-7xl text-center mt-2 ">
+          <h2 className="md:text-7xl text-center mt-2 ">
             <span className="text-yellow"> MERN Stack </span>Developer,{" "}
           </h2>
-          <h2 className="mt-1 text-center text-4xl">
+          <h2 className="mt-1 text-center md:text-4xl">
             <span className="">Specializing in</span>{" "}
-            <span className="text-4xl  text-yellow-200">{text}</span>
+            <span className="md:text-4xl  text-yellow-200">{text}</span>
             <Cursor cursorColor="white" />
           </h2>
         </motion.div>

@@ -3,12 +3,22 @@ import { assets } from "../../../helpers/assetProvider";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import Marquee from "react-fast-marquee";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
+import {
+  FaChartLine,
+  FaLaptopCode,
+  FaPalette,
+  FaRocket,
+  FaShoppingCart,
+} from "react-icons/fa";
+import { SiNextdotjs, SiReact } from "react-icons/si";
+import SectionTitle from "../../common/SectionTitle";
 
 const projectItem = [
   {
@@ -103,48 +113,71 @@ const projectItem = [
 
 const Project = () => {
   return (
-    <div className=" backdropFilter rounded-xl px-8 py-10 relative card">
-      <h1 className="text-5xl font-semibold text-center mb-8">
-        My Wo
-        <span className="bg-gradient-to-r  to-yellow-200 from-cyan-300 bg-clip-text text-transparent">
-          rks
-        </span>
-      </h1>
-      {/* Custom Navigation Buttons */}
-      <div className="absolute top-6 right-8 flex gap-3 z-10">
-        <button className="prev cursor-pointer hover:bg-[#ffffff3a] rounded hover:text-yellow-200 p-1 text-white font-bold text-lg transition-all">
-          {" "}
-          <MdArrowBackIosNew />
-        </button>
-        <button className="next cursor-pointer hover:bg-[#ffffff3a] rounded hover:text-yellow-200 transition-all p-1 text-white font-bold text-lg">
-          <MdArrowForwardIos />
-        </button>
-      </div>
-      <div className="mt-8">
-        <Swiper
-          pagination={{
-            type: "fraction",
-          }}
-          navigation={{ nextEl: ".next", prevEl: ".prev" }}
-          modules={[Pagination, Navigation, Autoplay]}
-          loop={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          className="mySwiper"
+    <div className="">
+      <SectionTitle className="mb-10" titleText={"Projects"} />
+      <div className=" mx-auto max-w-[450px] ">
+        <Marquee
+          gradient={false}
+          speed={60}
+          pauseOnHover={true}
+          className="border border-[#ffffff7e] w-20 py-7 rounded-full shadow-md mb-8 card"
         >
-          {projectItem?.map((project) => (
-            <SwiperSlide key={project?.id}>
-              {" "}
-              <ProjectCard
-                alt={project?.name}
-                src={project?.image}
-                title={project?.name}
-                description={project?.description}
-                //   github="github link"
-                liveLink={project?.link}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          <span className=" mx-2 flex items-center gap-5 bg-gradient-to-r  to-yellow-200 from-cyan-600 bg-clip-text text-transparent font-semibold text-5xl ">
+            <div className="w-3 h-3 rounded-full bg-white"></div> Fast
+          </span>
+          <span className=" mx-2 flex items-center gap-5 bg-gradient-to-r  to-yellow-200 from-cyan-600 bg-clip-text text-transparent font-semibold text-5xl ">
+            <div className="w-3 h-3 rounded-full bg-white"></div> Responsive
+          </span>
+          <span className=" mx-2 flex items-center gap-5 bg-gradient-to-r  to-yellow-200 from-cyan-600 bg-clip-text text-transparent font-semibold text-5xl ">
+            <div className="w-3 h-3 rounded-full bg-white"></div> Scalable
+            Design
+          </span>
+        </Marquee>
+      </div>
+
+      <div className="backdropFilter rounded-xl px-8 py-10 relative card">
+        {/* <h1 className="text-3xl md:text-5xl font-semibold text-center mb-5 mt-10">
+          My Pro
+          <span className="bg-gradient-to-r  to-yellow-200 from-cyan-300 bg-clip-text text-transparent">
+            ject
+          </span>
+        </h1> */}
+        {/* Custom Navigation Buttons */}
+        <div className="absolute top-10 right-8 flex gap-3 z-10">
+          <button className="prev cursor-pointer hover:bg-[#ffffff3a] hover:text-yellow-200 p-2 bg-[#0000005e] rounded-full text-white font-bold text-lg transition-all">
+            {" "}
+            <MdArrowBackIosNew />
+          </button>
+          <button className="next cursor-pointer hover:bg-[#ffffff3a] hover:text-yellow-200 transition-all p-2 bg-[#0000005e] rounded-full text-white font-bold text-lg">
+            <MdArrowForwardIos />
+          </button>
+        </div>
+        <div className="mt-5">
+          <Swiper
+            pagination={{
+              type: "fraction",
+            }}
+            navigation={{ nextEl: ".next", prevEl: ".prev" }}
+            modules={[Pagination, Navigation, Autoplay]}
+            loop={true}
+            // autoplay={{ delay: 3000, disableOnInteraction: false }}
+            className="mySwiper"
+          >
+            {projectItem?.map((project) => (
+              <SwiperSlide className="py-10" key={project?.id}>
+                {" "}
+                <ProjectCard
+                  alt={project?.name}
+                  src={project?.image}
+                  title={project?.name}
+                  description={project?.description}
+                  //   github="github link"
+                  liveLink={project?.link}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </div>
   );

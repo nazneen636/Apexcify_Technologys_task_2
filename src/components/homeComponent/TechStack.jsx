@@ -88,7 +88,7 @@ const techItem = [
 const TechStack = () => {
   return (
     <div className=" relative">
-      <h1 className="text-5xl font-semibold text-center mb-8">
+      <h1 className="text-3xl md:text-5xl font-semibold text-center mb-8">
         Tech S
         <span className="bg-gradient-to-r  to-yellow-200 from-cyan-300 bg-clip-text text-transparent">
           tac
@@ -104,6 +104,23 @@ const TechStack = () => {
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         scrollbar={{ el: ".tech-scrollbar", hide: false, draggable: true }}
         className="tech"
+        breakpoints={{
+          320: {
+            // for small mobiles
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          640: {
+            // tablets
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          1024: {
+            // desktop and larger
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
       >
         {techItem?.map((item) => (
           <SwiperSlide key={item.id}>

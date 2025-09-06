@@ -47,7 +47,7 @@ export default function ContactPage() {
 
   return (
     <div className="backdropFilter rounded-3xl p-8 py-12 w-full card">
-      <h1 className="text-5xl font-semibold text-center mb-8 ">
+      <h1 className="text-3xl md:text-5xl font-semibold text-center mb-8 ">
         Contact{" "}
         <span className="bg-gradient-to-r  to-yellow-200 from-cyan-300 bg-clip-text text-transparent">
           Me

@@ -40,10 +40,13 @@ const Experience = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
-        className="relative mt-8  flex justify-between w-full bg-yellow rounded-lg"
+        className="relative mt-8 flex gap-y-7 justify-between md:flex-row flex-col w-full bg-yellow rounded-lg"
       >
-        <motion.div variants={item} className="w-full border-r border-gray-500">
-          <h2 className="font-bold mb-10 text-2xl opacity-90">
+        <motion.div
+          variants={item}
+          className="w-full md:border-r md:border-gray-500"
+        >
+          <h2 className="font-bold mb-4 md:mb-10 text-lg md:text-2xl opacity-90">
             Job Experience
           </h2>
           <motion.div
@@ -51,7 +54,7 @@ const Experience = () => {
             initial="hidden"
             whileInView="visible"
             // viewport={{ once: true, amount: 0.5 }}
-            className="flex flex-col gap-10"
+            className="flex flex-col gap-5 md:gap-10"
           >
             {jobItem?.map((job) => (
               <motion.div
@@ -60,11 +63,11 @@ const Experience = () => {
                 className="flex gap-5 items-center group"
               >
                 <div className="bg-black rounded-full group-hover:bg-white w-8 h-8 flex items-center justify-center duration-300 transition-all aspect-square">
-                  <RiArrowRightUpLine className="text-white text-2xl group-hover:text-black duration-300 transition-all" />
+                  <RiArrowRightUpLine className="text-white text-lg md:text-2xl group-hover:text-black duration-300 transition-all" />
                 </div>
                 <div className="group-hover:text-yellow-200">
-                  <p className="opacity-70">{job?.year}</p>
-                  <h4 className="text-lg font-medium mt-1 opacity-90">
+                  <p className="opacity-70 text-sm md:text-base">{job?.year}</p>
+                  <h4 className="text-xs md:text-lg font-medium mt-1 opacity-90">
                     {job?.position}
                   </h4>
                 </div>
@@ -72,8 +75,8 @@ const Experience = () => {
             ))}
           </motion.div>
         </motion.div>
-        <motion.div variants={item} className="w-full ml-16">
-          <h2 className="font-bold mb-10 text-2xl opacity-90">
+        <motion.div variants={item} className="w-full ml-0 md:ml-16">
+          <h2 className="font-bold mb-4 md:mb-10 text-lg md:text-2xl opacity-90">
             Training Completion
           </h2>
           <motion.div
@@ -81,7 +84,7 @@ const Experience = () => {
             initial="hidden"
             whileInView="visible"
             // viewport={{ once: true, amount: 0.5 }}
-            className="flex flex-col gap-10"
+            className="flex flex-col gap-5 md:gap-10"
           >
             {trainingItem?.map((training) => (
               <motion.div
@@ -90,11 +93,13 @@ const Experience = () => {
                 className="flex gap-5 items-center group"
               >
                 <div className="bg-black rounded-full group-hover:bg-white w-8 h-8 flex items-center justify-center duration-300 transition-all aspect-square">
-                  <RiArrowRightUpLine className="text-white text-2xl group-hover:text-black duration-300 transition-all" />
+                  <RiArrowRightUpLine className="text-white text-lg md:text-2xl group-hover:text-black duration-300 transition-all" />
                 </div>
                 <div className="group-hover:text-yellow-200">
-                  <p className="opacity-70">{training?.year}</p>
-                  <h4 className="text-lg font-medium mt-1 opacity-90">
+                  <p className="opacity-70 text-sm md:text-base">
+                    {training?.year}
+                  </p>
+                  <h4 className="text-xs md:text-lg font-medium mt-1 opacity-90">
                     {training?.position}
                   </h4>
                 </div>

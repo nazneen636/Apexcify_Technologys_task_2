@@ -34,11 +34,11 @@ const About = () => {
     >
       <motion.div
         variants={item}
-        className="grid grid-cols-7 gap-8 text-justify"
+        className="md:grid grid-cols-7 gap-8 md:text-justify"
       >
         <SectionTitle titleText="About Me" />
         <div className="col-span-6">
-          <h2 className="text-3xl leading-[130%] capitalize font-semibold">
+          <h2 className="mt-3 md:mt-0 text-xl md:text-3xl leading-[130%] capitalize font-semibold">
             A passionate{" "}
             <span className="bg-gradient-to-l  to-yellow-200 from-cyan-300 bg-clip-text text-transparent px-1 rounded">
               MERN Stack Developer
@@ -51,7 +51,7 @@ const About = () => {
 
       <motion.p
         variants={item}
-        className="mt-8 text-base leading-[170%] opacity-60! text-justify"
+        className="mt-4 md:mt-8 text-xs md:text-base leading-[170%] opacity-60! text-justify"
       >
         Hi! I’m Nazneen Nahar Rima, a passionate MERN Stack Developer with 3+
         years of experience. Skilled in React.js, Next.js, Node.js, Express.js
@@ -62,7 +62,7 @@ const About = () => {
 
       <motion.div
         variants={item}
-        className="mt-20 flex justify-between opacity-90  -translate-y-10"
+        className="mt-20 flex md:flex-row gap-2 md:gap-0 flex-col justify-between opacity-90  -translate-y-10"
       >
         {serviceGroups?.map((group, groupIndex) => (
           <motion.div
@@ -71,7 +71,7 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.5 }}
             key={groupIndex}
-            className="flex flex-col gap-4"
+            className="flex  flex-col gap-2 md:gap-4"
           >
             {group.map((service) => (
               <motion.div
@@ -79,8 +79,8 @@ const About = () => {
                 key={service.id}
                 className="flex gap-4 items-center service-item"
               >
-                <FaArrowRightLong className="text-yellow-200 text-xl" />
-                <p className="text-base">{service.text}</p>
+                <FaArrowRightLong className="text-yellow-200 text-sm md:text-xl" />
+                <p className="text-[11px] md:text-base">{service.text}</p>
               </motion.div>
             ))}
           </motion.div>

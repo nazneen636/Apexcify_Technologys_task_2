@@ -30,7 +30,7 @@ const Drawer = ({ onChangeBG, onChangeColor }) => {
       {/* Settings Button */}
       <div
         onClick={() => setOpen(true)}
-        className="fixed w-12 h-12 rounded-full flex items-center justify-center bg-black text-yellow-500 text-2xl bottom-10 right-11 z-50 cursor-pointer"
+        className="fixed w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center md:bg-[#ffffff2c] text-yellow-500 text-2xl top-4.5 md:top-9 right-90 md:right-12 z-40 cursor-pointer hover:bg-yellow-200 hover:text-black transition-all "
       >
         <IoSettingsSharp />
       </div>
