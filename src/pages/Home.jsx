@@ -7,6 +7,7 @@ import TechStack from "../components/homeComponent/TechStack";
 import Project from "../components/homeComponent/project/Project";
 import Services from "../components/homeComponent/Service";
 import ContactPage from "../components/homeComponent/Contact";
+import Testimonial from "../components/homeComponent/Testimonial";
 
 const Home = () => {
   return (
@@ -31,6 +32,9 @@ const Home = () => {
       </div>
       <div id="project" className="pt-24">
         <Project />
+      </div>
+      <div id="project" className="pt-24">
+        <Testimonial />
       </div>
       <div id="contact" className="pt-24">
         <ContactPage />
