@@ -74,11 +74,13 @@ const StatsSection = () => {
           variants={item} // ✅ assign child variant here
           className="flex flex-col gap-2 md:gap-3 items-center justify-center border border-gray-200 md:px-6 px-2 rounded-xl py-6"
         >
-          <h1 className="text-3xl md:text-5xl font-normal">
+          <h1 className="text-2xl md:text-5xl font-normal">
             {stats[stat.key]}
             {stat.suffix}
           </h1>
-          <p className="text-[10px] md:text-lg opacity-80">{stat.label}</p>
+          <p className="text-[10px] md:text-lg opacity-80 text-center">
+            {stat.label}
+          </p>
         </motion.div>
       ))}
     </motion.div>
