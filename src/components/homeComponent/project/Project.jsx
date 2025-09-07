@@ -114,7 +114,6 @@ const projectItem = [
 const Project = () => {
   return (
     <div className="">
-      <SectionTitle className="mb-10" titleText={"Projects"} />
       <div className=" mx-auto max-w-[450px] ">
         <Marquee
           gradient={false}
@@ -135,13 +134,8 @@ const Project = () => {
         </Marquee>
       </div>
 
-      <div className="backdropFilter rounded-xl px-8 py-10 relative card">
-        {/* <h1 className="text-3xl md:text-5xl font-semibold text-center mb-5 mt-10">
-          My Pro
-          <span className="bg-gradient-to-r  to-yellow-200 from-cyan-300 bg-clip-text text-transparent">
-            ject
-          </span>
-        </h1> */}
+      <div className="backdropFilter  rounded-xl px-8 py-10 relative card">
+        <SectionTitle className="mb-10" titleText={"Projects"} />
         {/* Custom Navigation Buttons */}
         <div className="absolute top-10 right-8 flex gap-3 z-10">
           <button className="prev cursor-pointer hover:bg-[#ffffff3a] hover:text-yellow-200 p-2 bg-[#0000005e] rounded-full text-white font-bold text-lg transition-all">
@@ -161,7 +155,7 @@ const Project = () => {
             modules={[Pagination, Navigation, Autoplay]}
             loop={true}
             // autoplay={{ delay: 3000, disableOnInteraction: false }}
-            className="mySwiper"
+            className="projectSwiper"
           >
             {projectItem?.map((project) => (
               <SwiperSlide className="py-10" key={project?.id}>

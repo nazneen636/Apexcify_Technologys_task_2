@@ -44,11 +44,13 @@ const Testimonial = () => {
         <SectionTitle className={"mb-5"} titleText={"Testimonial"} />
 
         {/* External arrows */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-5 flex items-center gap-3 z-30">
-          <button className="prev hover:bg-[#ffffff3a] hover:text-yellow-200 p-2 bg-[#0000005e] rounded-full text-white text-lg transition-all">
+        <div className="absolute top-1/2 -translate-y-1/2 left-5 flex items-center gap-5 z-30">
+          <button className="testimonial-prev hover:bg-[#ffffff3a] hover:text-yellow-200 p-2 bg-[#0000005e] rounded-full text-white text-lg transition-all">
             <MdArrowBackIosNew />
           </button>
-          <button className="next hover:bg-[#ffffff3a] hover:text-yellow-200 p-2 bg-[#0000005e] rounded-full text-white text-lg transition-all">
+          {/*  fraction */}
+          <div className="left-pagination text-white font-medium flex items-center justify-center"></div>
+          <button className="testimonial-next hover:bg-[#ffffff3a] hover:text-yellow-200 p-2 bg-[#0000005e] rounded-full text-white text-lg transition-all">
             <MdArrowForwardIos />
           </button>
         </div>
@@ -80,10 +82,6 @@ const Testimonial = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          {/* Fraction pagination */}
-          <div className="mt-6">
-            <div className="left-pagination text-white font-medium"></div>
-          </div>
         </div>
 
         {/* Image area at bottom-right */}
@@ -92,7 +90,10 @@ const Testimonial = () => {
             onSwiper={setImageSwiper}
             controller={{ control: textSwiper }}
             modules={[Navigation, Pagination, Controller]}
-            navigation={{ nextEl: ".next", prevEl: ".prev" }}
+            navigation={{
+              nextEl: ".testimonial-next",
+              prevEl: ".testimonial-prev",
+            }}
             pagination={{ el: ".left-pagination", type: "fraction" }}
             slidesPerView={1}
             loop={true}

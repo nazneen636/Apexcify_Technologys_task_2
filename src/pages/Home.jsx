@@ -8,6 +8,7 @@ import Project from "../components/homeComponent/project/Project";
 import Services from "../components/homeComponent/Service";
 import ContactPage from "../components/homeComponent/Contact";
 import Testimonial from "../components/homeComponent/Testimonial";
+import WorkProcess from "../components/homeComponent/WorkProcess";
 
 const Home = () => {
   return (
@@ -32,6 +33,9 @@ const Home = () => {
       </div>
       <div id="project" className="pt-24">
         <Project />
+      </div>
+      <div id="project" className="pt-24">
+        <WorkProcess />
       </div>
       <div id="project" className="pt-24">
         <Testimonial />
