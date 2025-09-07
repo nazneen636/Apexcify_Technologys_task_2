@@ -78,7 +78,7 @@ const StatsSection = () => {
             {stats[stat.key]}
             {stat.suffix}
           </h1>
-          <p className="text-xs md:text-lg opacity-80">{stat.label}</p>
+          <p className="text-[10px] md:text-lg opacity-80">{stat.label}</p>
         </motion.div>
       ))}
     </motion.div>

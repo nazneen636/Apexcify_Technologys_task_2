@@ -7,7 +7,9 @@ import {
   FaHome,
   FaLinkedinIn,
   FaProjectDiagram,
+  FaQuoteLeft,
   FaServicestack,
+  FaTasks,
   FaTools,
   FaUser,
   FaUserAlt,
@@ -55,8 +57,11 @@ _.menuItem = [
   { id: 4, icon: FaBriefcase, path: "#experience", label: "Experience" },
   { id: 5, icon: FaCode, path: "#techstack", label: "Tech Stack" },
   { id: 6, icon: FaProjectDiagram, path: "#project", label: "Projects" },
-  { id: 7, icon: FaEnvelope, path: "#contact", label: "Contact" },
+  { id: 7, icon: FaTasks, path: "#workprocess", label: "Work Process" }, // New
+  { id: 8, icon: FaQuoteLeft, path: "#testimonial", label: "Testimonial" }, // New
+  { id: 9, icon: FaEnvelope, path: "#contact", label: "Contact" },
 ];
+
 // for framer motion
 // y axis animation
 // Parent container variant for stagger

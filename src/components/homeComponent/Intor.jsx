@@ -16,12 +16,12 @@ const Intor = () => {
   });
   return (
     <div>
-      <div className="h-64 md:h-auto text-white flex items-center flex-col justify-center">
+      <div className="min-h-64 md:h-auto text-white flex items-center flex-col justify-center">
         <GradientText
           colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
           animationSpeed={3}
           showBorder={false}
-          className="text-xl md:text-2xl text-center custom-class"
+          className="text-lg md:text-2xl text-center custom-class"
         >
           <span className=""> Hi!</span> <span className="hello">👋</span>{" "}
           <span className="">My name is Nazneen Nahar Rima</span>
@@ -34,7 +34,7 @@ const Intor = () => {
             duration: 2,
             ease: "easeIn",
           }}
-          className="text-4xl md:text-4xl"
+          className="text-3xl md:text-4xl"
         >
           <h1 className="md:text-7xl text-center mt-10 leading-[120%]">
             A Professional

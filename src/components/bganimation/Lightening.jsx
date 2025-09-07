@@ -282,7 +282,7 @@ export default function Orb({
   return (
     <div
       ref={ctnDom}
-      className="w-full h-[1500px] absolute -right-270 -top-90 -z-10"
+      className="w-full h-[1500px] absolute -right-90 md:-right-270 md:-top-90 -z-10 -top-110"
     />
   );
 }

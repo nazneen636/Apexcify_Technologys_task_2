@@ -4,16 +4,22 @@ import RightSidebar from "./sidebar/RightSideBar";
 import { Outlet } from "react-router";
 import BackgroundSwitcher from "./bganimation/BgSwitcher";
 import Drawer from "./common/Drawer";
+import MobieViewMenu from "./sidebar/MobieViewMenu";
+import { FaBars } from "react-icons/fa";
+import { IoSettingsSharp } from "react-icons/io5";
+import Setting from "./common/Setting";
 
 const Root = () => {
   const [profileOpen, setProfileOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [settingOpen, setSettingOpen] = useState(false);
   const [profileBg, setProfileBg] = useState("var(--profile-gradient)");
   const [bgType, setBgType] = useState("particle");
   const handleChangeColor = (color) => {
     setProfileBg(color);
   };
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div className="md:hidden flex py-8 w-full bg-black fixed top-0 left-0 z-30"></div>
       <div className="flex flex-col md:flex-row h-full justify-between items-center relative">
         <BackgroundSwitcher type={bgType} />
@@ -34,6 +40,30 @@ const Root = () => {
             </div>
           </div>
         )}
+        {menuOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 md:hidden w-full">
+            <MobieViewMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+          </div>
+        )}
+
+        {settingOpen && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 md:hidden w-full"
+            onClick={() => setSettingOpen(false)} // overlay closes modal
+          >
+            <div
+              className="relative w-[90%] max-w-md"
+              onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside Setting
+            >
+              <Setting
+                open={settingOpen}
+                setOpen={() => setSettingOpen(false)}
+                onChangeColor={handleChangeColor}
+                onChangeBG={setBgType}
+              />
+            </div>
+          </div>
+        )}
 
         <div className="min-h-screen w-full md:w-[60%] px-5 md:px-0 mx-auto">
           <Outlet />
@@ -47,12 +77,33 @@ const Root = () => {
         {!profileOpen && (
           <div
             onClick={() => setProfileOpen(true)}
-            className="absolute top-3 right-4 md:hidden w-12 h-12 rounded-full bg-[#ffffff28] font-bold text-yellow-500 flex items-center justify-center text-3xl z-40"
+            className="cursor-pointer fixed top-3.5 right-20 md:hidden w-[42px] h-[42px] rounded-full bg-[#ffffff28] font-bold text-yellow-500 flex items-center justify-center text-[27px] z-40"
           >
             <span className="fixed">N</span>
           </div>
         )}
-        <Drawer onChangeColor={handleChangeColor} onChangeBG={setBgType} />
+        {!menuOpen && (
+          <div
+            onClick={() => setMenuOpen(true)}
+            className="cursor-pointer fixed top-4 right-6 md:hidden w-10 h-10 rounded-lg bg-[#ffffff28] font-bold  flex items-center justify-center text-xl z-40"
+          >
+            <FaBars />
+          </div>
+        )}
+        {!settingOpen && (
+          <div
+            onClick={() => setSettingOpen(true)}
+            className="cursor-pointer fixed top-3.5 right-32 md:hidden w-10 h-10 rounded-lg font-bold  flex items-center justify-center text-[26px] z-40 text-yellow-500"
+          >
+            <IoSettingsSharp />
+          </div>
+        )}
+        <Drawer
+          open={settingOpen}
+          setOpen={setSettingOpen}
+          onChangeColor={handleChangeColor}
+          onChangeBG={setBgType}
+        />
       </div>
     </div>
   );

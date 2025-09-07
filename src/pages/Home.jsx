@@ -12,7 +12,7 @@ import WorkProcess from "../components/homeComponent/WorkProcess";
 
 const Home = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-x-hidden">
       <div id="home" className="pt-20">
         <Intro />
         <StatsSection />
@@ -34,10 +34,10 @@ const Home = () => {
       <div id="project" className="pt-24">
         <Project />
       </div>
-      <div id="project" className="pt-24">
+      <div id="workprocess" className="pt-24">
         <WorkProcess />
       </div>
-      <div id="project" className="pt-24">
+      <div id="testimonial" className="pt-24">
         <Testimonial />
       </div>
       <div id="contact" className="pt-24">
