@@ -16,7 +16,7 @@ const Intor = () => {
   });
   return (
     <div>
-      <div className="h-64 md:h-auto text-white flex items-center flex-col justify-center">
+      <div className="min-h-64 md:h-auto text-white flex items-center flex-col justify-center">
         <GradientText
           colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
           animationSpeed={3}
