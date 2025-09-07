@@ -42,7 +42,7 @@ const Intor = () => {
           <h2 className="md:text-7xl text-center mt-2 ">
             <span className="text-yellow"> MERN Stack </span>Developer,{" "}
           </h2>
-          <h2 className="mt-1 text-center md:text-4xl">
+          <h2 className="mt-1 text-center text-2xl md:text-4xl">
             <span className="leading-relaxed">Specializing in</span>
             <br />
             <span className="md:text-4xl  text-yellow-200">{text}</span>
