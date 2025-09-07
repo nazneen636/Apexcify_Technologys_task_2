@@ -35,17 +35,17 @@ _.socialMediaItem = [
   {
     id: 2,
     icon: FaLinkedinIn,
-    path: "/",
+    path: "https://www.linkedin.com/in/nazneen636/",
   },
   {
     id: 3,
     icon: FaFacebook,
-    path: "/",
+    path: "https://www.facebook.com/nazneen.nahar.501/",
   },
   {
     id: 4,
     icon: TfiGithub,
-    path: "/",
+    path: "https://github.com/nazneen636/",
   },
 ];
 

@@ -62,7 +62,7 @@ const StatsSection = () => {
   const item = lib.item;
   return (
     <motion.div
-      className="bg-yellow rounded-full mt-12 md:mt-16 px-2 md:px-16 md:py-10 flex items-center justify-between w-full text-gray-100"
+      className="bg-yellow rounded-full mt-12 md:mt-16 px-2 md:px-16 md:py-10 flex items-center justify-center gap-4 w-full text-gray-100"
       variants={lib.container}
       initial="hidden"
       whileInView="visible"

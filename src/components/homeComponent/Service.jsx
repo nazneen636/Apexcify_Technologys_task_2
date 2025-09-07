@@ -121,14 +121,16 @@ export default function Services() {
               )}
               {/* Title */}
               <h3
-                className={`text-xl md:text-3xl font-bold ${
+                className={`text-base md:text-3xl font-bold ${
                   openService === service.id
                     ? "text-white"
                     : "text-gray-400 hover:text-white transition-colors"
                 }`}
               >
                 {service.title}
-                <sup className="ml-1 text-xs text-gray-500">({service.id})</sup>
+                <sup className="ml-1 text-[10px] md:text-xs text-gray-500">
+                  ({service.id})
+                </sup>
               </h3>
             </div>
 
@@ -140,7 +142,7 @@ export default function Services() {
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="ml-12 mt-3 space-y-2 text-xs md:text-sm text-gray-400 list-disc list-inside overflow-hidden"
+                  className="ml-12 mt-3 space-y-2 text-[10px] md:text-sm text-gray-400 list-disc list-inside overflow-hidden"
                 >
                   {service.details.map((detail, i) => (
                     <li key={i} className="hover:text-white transition-colors">

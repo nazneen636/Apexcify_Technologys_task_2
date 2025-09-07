@@ -92,10 +92,12 @@ const WorkProcess = () => {
                   {step.icon}
                 </div>
               </div>
-              <h2 className="mt-5 mb-3 text-3xl font-semibold">{step.title}</h2>
+              <h2 className="mt-5 mb-3 text-xl md:text-3xl font-semibold">
+                {step.title}
+              </h2>
 
               {/* Bullet points */}
-              <ul className="list-disc list-inside text-gray-300 text-sm space-y-3 mt-3">
+              <ul className="list-disc list-inside text-gray-300 text-[10px] md:text-sm space-x-1 md:space-y-3 mt-3">
                 {step.points.map((point, idx) => (
                   <li key={idx}>{point}</li>
                 ))}

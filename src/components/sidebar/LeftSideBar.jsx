@@ -3,6 +3,7 @@ import profile from "../../assets/profile.png";
 import { GoArrowUpRight } from "react-icons/go";
 import lib from "../../lib/lib";
 import SpotlightCard from "../uiComponent/SpotLight";
+import { Link } from "react-router";
 
 export default function LeftSidebar({ isMobile, onClose, profileBg }) {
   return (
@@ -10,7 +11,7 @@ export default function LeftSidebar({ isMobile, onClose, profileBg }) {
       {isMobile && (
         <button
           onClick={onClose}
-          className="absolute top-3 right-3  text-white w-8 h-8 rounded-full z-10 hover:bg-yellow-200 transition-all"
+          className="absolute top-3 right-3  text-white w-8 h-8 rounded-full z-10 cursor-pointer hover:border hover:border-yellow-200 transition-all"
         >
           ✕
         </button>
@@ -50,27 +51,31 @@ export default function LeftSidebar({ isMobile, onClose, profileBg }) {
         {/* Social Links */}
         <div className="flex space-x-4 mt-6">
           {lib?.socialMediaItem?.map((item) => {
-            const Item = item.icon;
+            const Item = item?.icon;
             return (
-              <a
-                key={item.id}
-                href="#"
+              <Link
+                target="_blank"
+                key={item?.id}
+                to={item?.path}
                 className="p-2 bg-gray-800 rounded-full hover:bg-gray-700"
               >
                 <Item />
-              </a>
+              </Link>
             );
           })}
         </div>
       </div>
 
       {/* Footer Button */}
-      <button className="flex items-center justify-between md:w-[85%] gap-4 md:gap-0 bg-gray-900 px-6 py-2 rounded-full hover:bg-gray-800">
+      <a
+        href="#contact"
+        className="flex items-center justify-between md:w-[85%] gap-4 md:gap-0 bg-gray-900 px-6 py-2 rounded-full hover:bg-gray-800"
+      >
         <span>Get Started</span>
         <span className="bg-white text-black p-2 md:p-2.5 rounded-full">
           <GoArrowUpRight className="text-base md:text-xl" />
         </span>
-      </button>
+      </a>
     </SpotlightCard>
   );
 }

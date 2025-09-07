@@ -75,7 +75,7 @@ const Testimonial = () => {
             {testimonials.map((t) => (
               <SwiperSlide key={t.id}>
                 <div className="w-full max-w-full">
-                  <p className="text-white text-xl md:text-2xl leading-relaxed">
+                  <p className="text-white text-lg md:text-2xl leading-relaxed">
                     {t.text}
                   </p>
                 </div>
@@ -107,8 +107,12 @@ const Testimonial = () => {
                     className="rounded-2xl w-full h-full object-cover shadow-lg"
                   />
                   <div className="absolute left-0 bottom-2 z-20 w-full text-center rounded-b-2xl">
-                    <h3 className="text-yellow-200 font-semibold">{t.name}</h3>
-                    <p className="text-sm text-yellow-200 ">{t.title}</p>
+                    <h3 className="text-yellow-200 font-semibold text-sm md:text-base">
+                      {t.name}
+                    </h3>
+                    <p className="text-[10px] md:text-sm text-yellow-200 ">
+                      {t.title}
+                    </p>
                   </div>
                 </div>
               </SwiperSlide>

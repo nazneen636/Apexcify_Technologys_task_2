@@ -28,6 +28,8 @@ const projectItem = [
       "A modern product listing web app with responsive design, dynamic product grid, and smooth UI built using React and Tailwind CSS.",
     image: assets.product_listing,
     link: "https://apexcify-technologys-product-listin.vercel.app/",
+    githubLink:
+      "https://github.com/nazneen636/ApexcifyTechnologys_ProductListingWebsite",
   },
   {
     id: 2,
@@ -36,6 +38,7 @@ const projectItem = [
       "E-commerce website for fresh fruits with a clean UI, cart system, and smooth browsing experience.",
     image: assets.fresh,
     link: "https://fresh-fruit-one.vercel.app/",
+    githubLink: "https://github.com/nazneen636/Fresh-fruit",
   },
   {
     id: 3,
@@ -44,6 +47,7 @@ const projectItem = [
       "Luxury yacht booking website featuring a premium design, smooth scrolling, and responsive layouts.",
     image: assets.vip_Yacht,
     link: "https://vip-yacht-project.vercel.app/",
+    githubLink: "https://github.com/SMTech24-official/VIP-Yacht",
   },
   {
     id: 4,
@@ -52,6 +56,7 @@ const projectItem = [
       "Admin dashboard with interactive charts, analytics, and user-friendly UI built with React and Chart.js.",
     image: assets.dashboard,
     link: "https://delivery-app-xi-ten.vercel.app/",
+    githubLink: "https://github.com/nazneen636/Delivery-app",
   },
   {
     id: 5,
@@ -60,6 +65,7 @@ const projectItem = [
       "Full-stack e-commerce platform with product management, shopping cart, and secure checkout.",
     image: assets.cilicon,
     link: "https://cyclone-sigma.vercel.app/",
+    githubLink: "https://github.com/nazneen636/cyclone",
   },
   {
     id: 6,
@@ -68,6 +74,7 @@ const projectItem = [
       "Gaming landing page with engaging animations, responsive design, and interactive features.",
     image: assets.hancok,
     link: "https://nazneen636.github.io/Hancok-project/",
+    githubLink: "https://github.com/nazneen636/Hancok-project",
   },
   {
     id: 7,
@@ -100,6 +107,7 @@ const projectItem = [
       "Interactive quiz app with multiple-choice questions, score tracking, and clean UI.",
     image: assets.quiz,
     link: "https://quiz-app-theta-rosy.vercel.app/",
+    githubLink: "https://github.com/nazneen636/Quiz-App",
   },
   {
     id: 11,
@@ -108,6 +116,7 @@ const projectItem = [
       "Weather forecasting app that fetches live weather data using API integration and displays results beautifully.",
     image: assets.weather,
     link: "https://weather-app-phi-rose-56.vercel.app/",
+    githubLink: "https://github.com/nazneen636/weather-app",
   },
 ];
 
@@ -165,7 +174,7 @@ const Project = () => {
                   src={project?.image}
                   title={project?.name}
                   description={project?.description}
-                  //   github="github link"
+                  github={project?.githubLink}
                   liveLink={project?.link}
                 />
               </SwiperSlide>

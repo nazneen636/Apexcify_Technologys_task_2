@@ -44,7 +44,8 @@ const ProjectCard = ({
           </p>
           <div className="flex items-center gap-8">
             <Link
-              href={github}
+              to={github}
+              target="_blank"
               className="group hover:bg-yellow-200 duration-300 transition-all py-2 md:py-4 px-5 md:px-10 rounded-lg text-black text-base md:text-xl font-semibold bg-white flex gap-4 items-center"
             >
               GitHub Link
