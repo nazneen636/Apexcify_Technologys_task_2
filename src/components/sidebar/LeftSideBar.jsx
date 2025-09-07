@@ -6,11 +6,11 @@ import SpotlightCard from "../uiComponent/SpotLight";
 
 export default function LeftSidebar({ isMobile, onClose, profileBg }) {
   return (
-    <SpotlightCard className="h-auto w-80 bg-black text-white flex flex-col items-center gap-6 py-6 rounded-2xl shadow-md shadow-gray-100">
+    <SpotlightCard className="h-auto w-80 bg-black text-white flex flex-col items-center gap-6 py-6 rounded-2xl shadow-md shadow-gray-100 relative">
       {isMobile && (
         <button
           onClick={onClose}
-          className="absolute top-0 right-2 text-white  p-3 z-10 hover:text-yellow-200 transition-all"
+          className="absolute top-3 right-3  text-white w-8 h-8 rounded-full z-10 hover:bg-yellow-200 transition-all"
         >
           ✕
         </button>

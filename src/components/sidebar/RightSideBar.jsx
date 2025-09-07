@@ -10,7 +10,7 @@ export default function RightSidebar() {
     <div className="">
       <div
         onClick={() => setOpen(true)}
-        className="md:hidden block absolute p-2 rounded bg-[#ffffff3b] right-[220px] top-1 hover:bg-yellow-200 hover:text-black shadow"
+        className="md:hidden block absolute p-2 rounded bg-[#ffffff28] right-[220px] top-1 hover:bg-yellow-200 hover:text-black shadow"
       >
         <FaBars />
       </div>

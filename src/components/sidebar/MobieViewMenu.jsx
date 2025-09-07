@@ -1,7 +1,6 @@
 import React from "react";
 import lib from "../../lib/lib";
 import { Link } from "react-scroll";
-import { FaCross } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 
 const MobieViewMenu = ({ open, onClose }) => {
@@ -9,25 +8,28 @@ const MobieViewMenu = ({ open, onClose }) => {
     <>
       {/* Overlay */}
       {open && (
-        <div className="fixed inset-0 bg-black/50 z-50" onClick={onClose} />
+        <div onClick={onClose} className="fixed inset-0 bg-black/50 z-40" />
       )}
 
-      {/* Drawer */}
+      {/* Drawer Menu (left) */}
       <div
-        className={`fixed top-0 left-0 z-50 h-full w-64 bg-gray-900 text-white p-6 transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 h-full w-80 bg-[#111] text-white shadow-lg z-50 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Header */}
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-lg font-bold">Menu</h2>
-          <button onClick={onClose}>
-            <IoMdClose size={24} />
+        <div className="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+          <h2 className="text-lg font-semibold text-[#ffffffbe]">Menu</h2>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-yellow-400"
+          >
+            <IoMdClose size={26} />
           </button>
         </div>
 
         {/* Menu Items */}
-        <div className="flex flex-col space-y-4">
+        <div className="px-6 py-4 flex flex-col gap-3">
           {lib?.menuItem?.map((item) => {
             const Icon = item.icon;
             return (
@@ -38,10 +40,13 @@ const MobieViewMenu = ({ open, onClose }) => {
                 spy={true}
                 duration={500}
                 onClick={onClose}
-                className="flex items-center space-x-3 px-4 py-2 rounded-md hover:bg-gray-700"
+                className="flex items-center gap-3 px-4 py-2 rounded-md hover:bg-gray-800 hover:text-yellow-400 transition"
               >
-                <Icon size={20} />
-                <span>{item.label}</span>
+                <div className="text-[#0285b4]">
+                  {" "}
+                  <Icon size={20} />
+                </div>
+                <span className="text-sm">{item.label}</span>
               </Link>
             );
           })}
