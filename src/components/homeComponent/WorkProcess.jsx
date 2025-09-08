@@ -82,11 +82,11 @@ const WorkProcess = () => {
       >
         {processSteps.map((step) => (
           <SwiperSlide key={step.id}>
-            <div className="rounded-2xl card px-6 py-8 flex flex-col min-h-[320px] workProcessGradient border-2 border-[#09568ac5]">
+            <div className="rounded-2xl card px-6 py-8 flex flex-col min-h-[340px] workProcessGradient border-2 border-[#09568ac5]">
               {/* Step number + Icon + Title */}
               <div className="flex  justify-between ">
                 <div className="text-gray-300 font-bold text-sm bg-gray-600 rounded-full px-3 py-1 h-fit">
-                  Step no {step.id}
+                  Step {step.id}
                 </div>
                 <div className="bg-gradient-to-l text-white from-cyan-600 to-yellow-500 p-7 flex items-center justify-center rounded-full shadow-md">
                   {step.icon}

@@ -8,7 +8,7 @@ export default function RightSidebar() {
   const [open, setOpen] = useState(false);
   return (
     <div className="">
-      <div className="hidden w-[60px] bg-black text-white lg:flex flex-col items-center justify-between py-2 lg:py-6 rounded-full! shadow-lg px-2 blurRightSideBar">
+      <div className="hidden w-[60px] bg-black text-white xl:flex flex-col items-center justify-between py-2 xl:py-6 rounded-full! shadow-xl px-2 blurRightSideBar">
         {/* Menu */}
         {/* desktop view menu bar */}
         <div className="flex flex-col items-center space-y-1 ">
@@ -21,10 +21,10 @@ export default function RightSidebar() {
                 smooth={true}
                 spy={true}
                 duration={500}
-                className="lg:p-3 p-2 rounded-full hover:bg-[#0000002c] hover:text-white transition-all"
+                className="xl:p-2.5 p-2 rounded-full hover:bg-[#0000002c] hover:text-white transition-all"
                 activeClass="bg-white! text-gray-800!"
               >
-                <Icon size={22} />
+                <Icon size={20} />
               </Link>
             );
           })}

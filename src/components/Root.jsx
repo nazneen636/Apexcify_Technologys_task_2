@@ -20,17 +20,17 @@ const Root = () => {
   };
   return (
     <div className="relative overflow-x-hidden">
-      <div className="lg:hidden flex py-8 w-full bg-black fixed top-0 left-0 z-30"></div>
-      <div className="flex flex-col lg:flex-row h-full justify-between items-center relative">
+      <div className="xl:hidden flex py-8 w-full bg-black fixed top-0 left-0 z-30"></div>
+      <div className="flex flex-col xl:flex-row h-full justify-between items-center relative">
         <BackgroundSwitcher type={bgType} />
-        <div className="lg:w-[30%] lg:mt-0 mt-24 hidden lg:block">
-          <div className="lg:fixed top-10 lg:top-4 lg:left-10">
+        <div className="xl:w-[30%] xl:mt-0 mt-24 hidden xl:block">
+          <div className="xl:fixed top-10 xl:top-4 xl:left-10">
             <LeftSidebar profileBg={profileBg} />
           </div>
         </div>
         {/* Mobile modal sidebar */}
         {profileOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 lg:hidden w-full">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 xl:hidden w-full">
             <div className="relative w-[95%]">
               <LeftSidebar
                 profileBg={profileBg}
@@ -41,18 +41,18 @@ const Root = () => {
           </div>
         )}
         {menuOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 lg:hidden w-full">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 xl:hidden w-full">
             <MobieViewMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
           </div>
         )}
 
         {settingOpen && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 lg:hidden w-full"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 xl:hidden w-full"
             onClick={() => setSettingOpen(false)} // overlay closes modal
           >
             <div
-              className="relative w-[90%] max-w-lg"
+              className="relative w-[90%] max-w-xl"
               onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside Setting
             >
               <Setting
@@ -65,11 +65,11 @@ const Root = () => {
           </div>
         )}
 
-        <div className="min-h-screen w-full lg:w-[60%] px-5 lg:px-0 mx-auto">
+        <div className="min-h-screen w-full xl:w-[60%] px-5 xl:px-0 mx-auto">
           <Outlet />
         </div>
-        <div className="lg:w-[10%]">
-          <div className="lg:fixed right-[40%] top-4 lg:right-10 lg:top-1/2 lg:-translate-y-1/2 z-40">
+        <div className="xl:w-[10%]">
+          <div className="xl:fixed right-[40%] top-4 xl:right-10 xl:top-1/2 xl:-translate-y-1/2 z-40">
             <RightSidebar />
           </div>
         </div>
@@ -77,7 +77,7 @@ const Root = () => {
         {!profileOpen && (
           <div
             onClick={() => setProfileOpen(true)}
-            className="cursor-pointer fixed top-3.5 right-20 lg:hidden w-[42px] h-[42px] rounded-full bg-[#ffffff28] font-bold text-yellow-500 flex items-center justify-center text-[27px] z-40"
+            className="cursor-pointer fixed top-3.5 right-20 xl:hidden w-[42px] h-[42px] rounded-full bg-[#ffffff28] font-bold text-yellow-500 flex items-center justify-center text-[27px] z-40"
           >
             <span className="fixed">N</span>
           </div>
@@ -85,7 +85,7 @@ const Root = () => {
         {!menuOpen && (
           <div
             onClick={() => setMenuOpen(true)}
-            className="cursor-pointer fixed top-4 right-6 lg:hidden w-10 h-10 rounded-lg bg-[#ffffff28] font-bold  flex items-center justify-center text-xl z-40"
+            className="cursor-pointer fixed top-4 right-6 xl:hidden w-10 h-10 rounded-xl bg-[#ffffff28] font-bold  flex items-center justify-center text-xl z-40"
           >
             <FaBars />
           </div>
@@ -93,7 +93,7 @@ const Root = () => {
         {!settingOpen && (
           <div
             onClick={() => setSettingOpen(true)}
-            className="cursor-pointer fixed top-3.5 right-32 lg:hidden w-10 h-10 rounded-lg font-bold  flex items-center justify-center text-[26px] z-40 text-yellow-500"
+            className="cursor-pointer fixed top-3.5 right-32 xl:hidden w-10 h-10 rounded-xl font-bold  flex items-center justify-center text-[26px] z-40 text-yellow-500"
           >
             <IoSettingsSharp />
           </div>

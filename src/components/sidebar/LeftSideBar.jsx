@@ -7,7 +7,7 @@ import { Link } from "react-router";
 
 export default function LeftSidebar({ isMobile, onClose, profileBg }) {
   return (
-    <SpotlightCard className="h-auto w-full lg:w-80 bg-black text-white flex flex-col items-center gap-6 py-6 rounded-2xl shadow-lg shadow-gray-100 relative">
+    <SpotlightCard className="h-auto w-full xl:w-80 py-4 bg-black text-white flex flex-col items-center gap-6 py-6 rounded-2xl shadow-lg shadow-gray-100 relative">
       {isMobile && (
         <button
           onClick={onClose}
