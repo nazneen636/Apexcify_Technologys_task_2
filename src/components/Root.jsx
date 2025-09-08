@@ -31,7 +31,7 @@ const Root = () => {
         {/* Mobile modal sidebar */}
         {profileOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 md:hidden w-full">
-            <div className="relative w-[70%]">
+            <div className="relative w-[95%]">
               <LeftSidebar
                 profileBg={profileBg}
                 isMobile={true}
