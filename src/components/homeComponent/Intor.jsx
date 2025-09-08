@@ -49,6 +49,19 @@ const Intor = () => {
             <Cursor cursorColor="white" />
           </h2>
         </motion.div>
+        <div className="relative mt-10">
+          <div className="relative z-10  bg-gradient-to-r  to-yellow-400 from-cyan-600 px-6 py-4 border-b border-r border-b-black border-r-black rounded-sm">
+            {" "}
+            <a
+              className="text-2xl"
+              href="/Rima Resume.pdf"
+              download="My Resume"
+            >
+              Download CV
+            </a>
+          </div>
+          <div className="absolute z-0 rounded-sm -right-1 -bottom-1 w-full h-full bg-white"></div>
+        </div>
       </div>
     </div>
   );
