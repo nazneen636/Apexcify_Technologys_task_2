@@ -7,7 +7,7 @@ import { Link } from "react-router";
 
 export default function LeftSidebar({ isMobile, onClose, profileBg }) {
   return (
-    <SpotlightCard className="h-auto w-80 bg-black text-white flex flex-col items-center gap-6 py-6 rounded-2xl shadow-md shadow-gray-100 relative">
+    <SpotlightCard className="h-auto w-full lg:w-80 bg-black text-white flex flex-col items-center gap-6 py-6 rounded-2xl shadow-lg shadow-gray-100 relative">
       {isMobile && (
         <button
           onClick={onClose}
@@ -25,7 +25,7 @@ export default function LeftSidebar({ isMobile, onClose, profileBg }) {
 
         {/* Profile Image */}
         <div
-          className="w-40 h-40 md:w-56 md:h-56 rounded-xl overflow-hidden"
+          className="w-40 h-40 lg:w-56 lg:h-56 rounded-xl overflow-hidden"
           style={{ background: profileBg }}
         >
           <img
@@ -41,10 +41,10 @@ export default function LeftSidebar({ isMobile, onClose, profileBg }) {
         </h1>
 
         {/* Email */}
-        <p className="text-gray-300 text-base md:text-xl mt-2">
+        <p className="text-gray-300 text-base lg:text-xl mt-2">
           rimann636@gmail.com
         </p>
-        <p className="text-xs md:text-base text-gray-500">
+        <p className="text-xs lg:text-base text-gray-500">
           From Dhaka, Bangladesh
         </p>
 
@@ -69,11 +69,11 @@ export default function LeftSidebar({ isMobile, onClose, profileBg }) {
       {/* Footer Button */}
       <a
         href="#contact"
-        className="flex items-center justify-between md:w-[85%] gap-4 md:gap-0 bg-gray-900 px-6 py-2 rounded-full hover:bg-gray-800"
+        className="flex items-center justify-between lg:w-[85%] gap-4 lg:gap-0 bg-gray-900 px-6 py-2 rounded-full hover:bg-gray-800"
       >
         <span>Get Started</span>
-        <span className="bg-white text-black p-2 md:p-2.5 rounded-full">
-          <GoArrowUpRight className="text-base md:text-xl" />
+        <span className="bg-white text-black p-2 lg:p-2.5 rounded-full">
+          <GoArrowUpRight className="text-base lg:text-xl" />
         </span>
       </a>
     </SpotlightCard>

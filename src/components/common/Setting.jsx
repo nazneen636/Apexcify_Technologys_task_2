@@ -24,7 +24,7 @@ const bgOptions = [
 const Setting = ({ open, setOpen, onChangeBG, onChangeColor }) => {
   return (
     <div
-      className={`fixed top-0 right-0 h-full md:w-96 bg-[#111] text-white shadow-lg z-50 transform transition-transform duration-300 ${
+      className={`fixed top-0 right-0 h-full lg:w-96 bg-[#111] text-white shadow-lg z-50 transform transition-transform duration-300 ${
         open ? "translate-x-0" : "translate-x-full"
       }`}
     >
