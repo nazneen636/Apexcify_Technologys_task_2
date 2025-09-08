@@ -66,10 +66,10 @@ _.menuItem = [
 // y axis animation
 // Parent container variant for stagger
 _.container = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, x: 50 },
   visible: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
       type: "spring",
       stiffness: 60,
@@ -81,8 +81,8 @@ _.container = {
 
 // Child item variant
 _.item = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
 };
 
 // x axis animation

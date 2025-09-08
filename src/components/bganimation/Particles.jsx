@@ -37,6 +37,7 @@ const ParticlesBG = () => {
             background: {
               color: {
                 value: "transparent",
+                type: "circle",
               },
             },
             // fullScreen: { enable: false },
@@ -58,21 +59,22 @@ const ParticlesBG = () => {
                   quantity: 4,
                 },
                 repulse: {
-                  distance: 50,
+                  distance: 20,
                   duration: 0.4,
                 },
               },
             },
             particles: {
               color: {
-                value: "#ffffff",
+                value: "#E4C31B",
+                opacity: 0.4,
               },
               links: {
-                color: "#ffffff",
+                color: "#476EAE",
                 distance: 300,
                 enable: true,
                 opacity: 0.3,
-                width: 0.3,
+                width: 0.2,
               },
               move: {
                 direction: "none",
@@ -80,28 +82,28 @@ const ParticlesBG = () => {
                 outModes: {
                   default: "bounce",
                 },
-                random: false,
+                random: true,
                 speed: 0.5,
                 straight: false,
               },
               number: {
                 density: {
                   enable: true,
-                  area: 500,
+                  area: 700,
                 },
-                value: 100,
+                value: 300,
               },
               opacity: {
-                value: 0.2,
+                value: 0.4,
               },
               shape: {
-                type: "circle",
+                type: "triangle",
               },
               size: {
-                value: { min: 1, max: 3 },
+                value: { min: 1, max: 2 },
               },
             },
-            detectRetina: true,
+            detectRetina: false,
           }}
         />
       )}
