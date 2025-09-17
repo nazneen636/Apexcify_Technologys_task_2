@@ -45,6 +45,6 @@ export default function BackgroundSwitcher({ type }) {
     case "solid":
       return null;
     default:
-      return <Particles />;
+      return <Lightening />;
   }
 }
